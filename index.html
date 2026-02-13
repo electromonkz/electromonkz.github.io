@@ -5,96 +5,94 @@
     <meta name="yandex-verification" content="5663554e20986161" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>ELECTROMON | Профессиональный электромонтаж Алматы</title>
+    <meta name="description" content="ELECTROMON — профессиональный электромонтаж в Алматы, ЖК Уш Сункар. Установка зарядок для электромобилей, замена проводки.">
+    
+    <title>ELECTROMON | Электромонтаж Алматы</title>
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
     
     <style>
-        :root { --gold: #ffc107; --dark: #121212; --accent: #ffdb70; --white: #ffffff; --shadow: 0 10px 30px rgba(0,0,0,0.1); }
-        
+        :root { --gold: #ffc107; --dark: #121212; --shadow: 0 10px 30px rgba(0,0,0,0.15); }
         * { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
-        body { font-family: 'Open Sans', sans-serif; background: #fdfdfd; color: #333; line-height: 1.6; overflow-x: hidden; }
+        body { font-family: 'Open Sans', sans-serif; background: #fdfdfd; color: #333; line-height: 1.6; overflow-x: hidden; scroll-behavior: smooth; }
         .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
 
-        /* Плавающая кнопка связи */
-        .floating-contact {
-            position: fixed; bottom: 20px; right: 20px; z-index: 9999;
-            background: var(--gold); color: #000; width: 60px; height: 60px;
-            border-radius: 50%; display: flex; align-items: center; justify-content: center;
-            box-shadow: 0 5px 20px rgba(255,193,7,0.6); text-decoration: none;
+        /* ТА САМАЯ ПЛАВАЮЩАЯ КНОПКА */
+        .call-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 65px;
+            height: 65px;
+            background: var(--gold);
+            color: #000;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            box-shadow: 0 8px 25px rgba(255,193,7,0.5);
+            z-index: 10000;
+            text-decoration: none;
+            transition: 0.3s;
             animation: pulse-ring 2s infinite;
         }
-        .floating-contact i { font-size: 24px; }
-        @keyframes pulse-ring { 0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255,193,7,0.7); } 70% { transform: scale(1.1); box-shadow: 0 0 0 15px rgba(255,193,7,0); } 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255,193,7,0); } }
+        .call-float:hover { transform: scale(1.1); background: #fff; }
+        
+        @keyframes pulse-ring {
+            0% { box-shadow: 0 0 0 0 rgba(255, 193, 7, 0.7); }
+            70% { box-shadow: 0 0 0 20px rgba(255, 193, 7, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(255, 193, 7, 0); }
+        }
 
         /* Шапка */
-        header { background: rgba(255,255,255,0.95); backdrop-filter: blur(10px); padding: 10px 0; position: fixed; width: 100%; top: 0; z-index: 1000; border-bottom: 2px solid var(--gold); box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+        header { background: rgba(255,255,255,0.96); backdrop-filter: blur(10px); padding: 12px 0; position: fixed; width: 100%; top: 0; z-index: 1000; border-bottom: 2px solid var(--gold); }
         .nav { display: flex; justify-content: space-between; align-items: center; }
-        .logo { display: flex; align-items: center; gap: 8px; font-family: 'Montserrat'; font-weight: 900; color: #000; text-decoration: none; font-size: clamp(16px, 4vw, 22px); }
-        .logo span { color: var(--gold); background: #000; padding: 2px 8px; border-radius: 4px; margin-right: 5px; }
+        .logo { display: flex; align-items: center; gap: 8px; font-family: 'Montserrat'; font-weight: 900; color: #000; text-decoration: none; }
+        .logo span { color: var(--gold); background: #000; padding: 2px 8px; border-radius: 4px; }
 
-        /* Главный экран */
-        .hero { padding: 160px 0 100px; background: radial-gradient(circle at top right, #fff9e6, #ffffff); text-align: center; }
-        .hero h1 { font-family: 'Montserrat'; font-size: clamp(2rem, 8vw, 3.5rem); font-weight: 900; line-height: 1.1; margin-bottom: 20px; letter-spacing: -1px; }
-        .hero h1 span { color: var(--gold); -webkit-text-stroke: 1px #000; }
-        .hero p { font-size: clamp(1rem, 3vw, 1.2rem); color: #666; max-width: 800px; margin: 0 auto 40px; }
+        /* Hero & About */
+        .hero { padding: 160px 0 60px; background: radial-gradient(circle at top right, #fff9e6, #ffffff); text-align: center; }
+        .hero h1 { font-family: 'Montserrat'; font-size: clamp(2.2rem, 8vw, 3.8rem); font-weight: 900; margin-bottom: 15px; }
+        .hero h1 span { color: var(--gold); }
+        .about-text { max-width: 800px; margin: 0 auto 40px; color: #666; font-size: 1.05rem; }
 
-        /* Карточки цен */
-        section { padding: 80px 0; }
-        .section-title { text-align: center; font-family: 'Montserrat'; font-size: clamp(1.8rem, 5vw, 2.5rem); font-weight: 900; margin-bottom: 50px; position: relative; }
-        .section-title::after { content: ''; display: block; width: 50px; height: 5px; background: var(--gold); margin: 15px auto; border-radius: 10px; }
+        /* Калькулятор */
+        .calc-card { background: #fff; border-radius: 25px; padding: 30px; box-shadow: var(--shadow); border: 2px solid var(--gold); margin-bottom: 50px; }
+        .calc-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
+        input[type="range"] { width: 100%; height: 8px; background: #eee; border-radius: 5px; accent-color: var(--gold); cursor: pointer; }
+        .result-box { background: var(--dark); color: var(--gold); padding: 20px; border-radius: 15px; text-align: center; margin-top: 20px; }
+        .result-box h2 { font-family: 'Montserrat'; font-size: 32px; }
 
-        .price-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-        .card { background: #fff; border-radius: 20px; padding: 40px 30px; border: 1px solid #eee; transition: 0.4s; position: relative; display: flex; flex-direction: column; justify-content: space-between; }
-        .card:hover { transform: translateY(-10px); box-shadow: var(--shadow); border-color: var(--gold); }
-        .card.featured { border: 2px solid var(--gold); background: #fffdf5; }
-        .card-badge { position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background: #000; color: var(--gold); padding: 5px 20px; border-radius: 20px; font-size: 12px; font-weight: 800; }
+        /* Форма и QR */
+        .form-section { background: var(--dark); color: #fff; border-radius: 30px; padding: 40px; display: flex; flex-wrap: wrap; gap: 40px; align-items: center; margin-top: 40px; }
+        .form-content { flex: 1; min-width: 280px; }
+        .qr-container { background: #fff; padding: 20px; border-radius: 20px; text-align: center; position: relative; margin: 0 auto; }
+        .qr-icon { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -85%); background: #fff; width: 35px; height: 35px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 20px; color: var(--gold); border: 2px solid #000; }
         
-        .price-tag { font-size: 32px; font-weight: 900; margin-bottom: 20px; color: #000; }
-        .price-tag span { font-size: 14px; color: #888; font-weight: 400; }
+        .form-group { margin-bottom: 15px; text-align: left; }
+        .form-group label { display: block; margin-bottom: 5px; color: var(--gold); font-size: 12px; font-weight: 800; }
+        .form-group input, .form-group select { width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #333; background: #1e1e1e; color: #fff; }
         
-        .feature-list { list-style: none; margin-bottom: 30px; text-align: left; }
-        .feature-list li { margin-bottom: 12px; display: flex; align-items: center; gap: 10px; font-size: 15px; }
-        .feature-list li i { color: #2ecc71; }
+        .btn-gold { background: var(--gold); color: #000; border: none; padding: 18px; width: 100%; border-radius: 12px; font-family: 'Montserrat'; font-weight: 900; cursor: pointer; transition: 0.3s; text-align: center; display: block; text-decoration: none; font-size: 16px; }
 
-        /* Кнопки */
-        .btn { display: inline-block; padding: 18px 30px; border-radius: 12px; font-family: 'Montserrat'; font-weight: 800; text-decoration: none; text-align: center; transition: 0.3s; border: none; cursor: pointer; width: 100%; }
-        .btn-gold { background: var(--gold); color: #000; box-shadow: 0 5px 15px rgba(255,193,7,0.3); }
-        .btn-gold:hover { background: #000; color: var(--gold); }
+        /* Карта */
+        .map-section { height: 450px; width: 100%; border-top: 4px solid var(--gold); margin-top: 60px; }
+        iframe { width: 100%; height: 100%; border: 0; }
 
-        /* Услуги иконками */
-        .services-mini { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 15px; }
-        .mini-card { background: #fff; padding: 20px; border-radius: 15px; text-align: center; border: 1px solid #f0f0f0; transition: 0.3s; }
-        .mini-card i { font-size: 30px; margin-bottom: 10px; display: block; color: var(--gold); }
-        .mini-card span { font-size: 12px; font-weight: 700; font-family: 'Montserrat'; }
+        footer { padding: 60px 0; text-align: center; border-top: 1px solid #eee; }
 
-        /* Форма анкеты */
-        .form-section { background: #121212; color: #fff; border-radius: 30px; padding: 50px 30px; margin-top: 50px; }
-        .form-group { margin-bottom: 20px; }
-        .form-group label { display: block; margin-bottom: 8px; font-size: 14px; color: var(--gold); font-weight: 600; }
-        .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 15px; border-radius: 10px; border: 1px solid #333; background: #1e1e1e; color: #fff; font-family: inherit; }
-
-        /* КАРТА */
-        .map-frame { height: 450px; width: 100%; border-top: 3px solid var(--gold); margin-top: 50px; }
-        iframe { width: 100%; height: 100%; border: 0; filter: grayscale(0.2); }
-
-        /* Футер */
-        footer { padding: 60px 0; background: #fff; border-top: 1px solid #eee; text-align: center; }
-        .social-links { margin: 25px 0; display: flex; justify-content: center; gap: 20px; }
-        .social-links a { width: 50px; height: 50px; border-radius: 50%; border: 1px solid #eee; display: flex; align-items: center; justify-content: center; color: #333; font-size: 22px; transition: 0.3s; text-decoration: none; }
-        .social-links a:hover { border-color: var(--gold); color: var(--gold); transform: scale(1.1); }
-
-        @media (max-width: 600px) {
-            .hero { padding: 120px 0 60px; }
-            .form-section { border-radius: 20px; padding: 30px 20px; }
-            .map-frame { height: 350px; }
+        @media (max-width: 768px) { 
+            .form-section { flex-direction: column-reverse; padding: 30px 20px; }
+            .call-float { width: 55px; height: 55px; bottom: 20px; right: 20px; font-size: 24px; }
         }
     </style>
 </head>
 <body>
 
-<a href="tel:+77476619341" class="floating-contact">
+<a href="tel:+77476619341" class="call-float">
     <i class="fas fa-phone"></i>
 </a>
 
@@ -105,133 +103,87 @@
     </div>
 </header>
 
-<section class="hero">
-    <div class="container">
-        <h1>Электромонтаж <br><span>УРОВНЯ EXPERT</span></h1>
-        <p>От установки зарядных станций для электрокаров до полной замены проводки под ключ в Алматы (ЖК Уш Сункар). Работаем чисто, надежно, с гарантией.</p>
-        <div style="display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;">
-            <a href="#order" class="btn btn-gold" style="width: auto;">ЗАПОЛНИТЬ АНКЕТУ</a>
+<section class="hero container">
+    <h1>ELECTRO<span>MON</span></h1>
+    <div class="about-text">
+        <p><b>Профессиональный электромонтаж в Алматы.</b> Мы находимся в <b>ЖК Уш Сункар</b> и специализируемся на установке зарядных станций для электромобилей, сборке щитов и полной замене проводки. Гарантия 2 года. Чистота и безопасность гарантированы.</p>
+    </div>
+
+    <h2 style="font-family:'Montserrat'; margin-bottom:20px;">КАЛЬКУЛЯТОР</h2>
+    <div class="calc-card">
+        <div class="calc-row"><span>Точки (розетки/свет):</span> <b id="pointVal">10</b></div>
+        <input type="range" id="points" min="1" max="100" value="10" oninput="calculate()">
+        
+        <div class="calc-row" style="margin-top:20px;">
+            <span>Сборка щита:</span>
+            <select id="shield" onchange="calculate()" style="padding:5px; border-radius:5px;">
+                <option value="0">Не нужна</option>
+                <option value="20000">Стандарт</option>
+                <option value="40000">Премиум</option>
+            </select>
+        </div>
+
+        <div class="result-box">
+            <span>Предварительная стоимость:</span>
+            <h2 id="totalPrice">45 000 ₸</h2>
         </div>
     </div>
-</section>
 
-<section id="prices">
-    <div class="container">
-        <h2 class="section-title">ТАРИФЫ И ЦЕНЫ</h2>
-        <div class="price-grid">
-            <div class="card">
-                <div>
-                    <h3>Стандарт</h3>
-                    <div class="price-tag">от 8 000 ₸ <span>/ точка</span></div>
-                    <ul class="feature-list">
-                        <li><i class="fas fa-check-circle"></i> Замена проводки</li>
-                        <li><i class="fas fa-check-circle"></i> Установка розеток</li>
-                        <li><i class="fas fa-check-circle"></i> Гарантия 1 год</li>
-                    </ul>
-                </div>
-                <a href="#order" class="btn btn-gold">ВЫБРАТЬ</a>
-            </div>
-            
-            <div class="card featured">
-                <div class="card-badge">РЕКОМЕНДУЕМ</div>
-                <div>
-                    <h3>Зарядка EV</h3>
-                    <div class="price-tag">от 25 000 ₸ <span>/ монтаж</span></div>
-                    <ul class="feature-list">
-                        <li><i class="fas fa-check-circle"></i> Tesla, Zeekr, BYD</li>
-                        <li><i class="fas fa-check-circle"></i> Кабель под нагрузку</li>
-                        <li><i class="fas fa-check-circle"></i> Паркинг / Частный дом</li>
-                    </ul>
-                </div>
-                <a href="#order" class="btn btn-gold">ВЫБРАТЬ</a>
-            </div>
-
-            <div class="card">
-                <div>
-                    <h3>Комплекс</h3>
-                    <div class="price-tag">от 150 000 ₸ <span>/ объект</span></div>
-                    <ul class="feature-list">
-                        <li><i class="fas fa-check-circle"></i> Электрика "под ключ"</li>
-                        <li><i class="fas fa-check-circle"></i> Сборка щита (бесплатно)</li>
-                        <li><i class="fas fa-check-circle"></i> Договор и чек</li>
-                    </ul>
-                </div>
-                <a href="#order" class="btn btn-gold">ВЫБРАТЬ</a>
-            </div>
+    <div class="form-section" id="order">
+        <div class="qr-container">
+            <div id="qrcode"></div>
+            <div class="qr-icon">⚡</div>
+            <span style="color:#000; font-size:10px; font-family:'Montserrat'; font-weight:900; display:block; margin-top:10px;">SCAN FOR WHATSAPP</span>
         </div>
-    </div>
-</section>
-
-<section id="services" style="background: #f4f4f4;">
-    <div class="container">
-        <h2 class="section-title">ВСЕ УСЛУГИ</h2>
-        <div class="services-mini">
-            <div class="mini-card"><i class="fas fa-plug"></i><span>РОЗЕТКИ</span></div>
-            <div class="mini-card"><i class="fas fa-bolt"></i><span>ЩИТКИ</span></div>
-            <div class="mini-card"><i class="fas fa-charging-station"></i><span>EV-ЗАРЯДКИ</span></div>
-            <div class="mini-card"><i class="fas fa-lightbulb"></i><span>СВЕТ</span></div>
-            <div class="mini-card"><i class="fas fa-fire"></i><span>ТЕПЛЫЙ ПОЛ</span></div>
-            <div class="mini-card"><i class="fas fa-shield-alt"></i><span>ЗАЩИТА</span></div>
-        </div>
-    </div>
-</section>
-
-<section id="order">
-    <div class="container">
-        <div class="form-section">
-            <h2 style="font-family: 'Montserrat'; text-align: center; margin-bottom: 30px;">АНКЕТА ЗАЯВКИ</h2>
+        <div class="form-content">
+            <h2 style="margin-bottom: 20px; font-family: 'Montserrat';">ОСТАВИТЬ ЗАЯВКУ</h2>
             <form id="waForm">
-                <div class="form-group">
-                    <label>КАК ВАС ЗОВУТ?</label>
-                    <input type="text" id="fname" placeholder="Введите имя" required>
-                </div>
-                <div class="form-group">
-                    <label>ВАШ ТЕЛЕФОН</label>
-                    <input type="tel" id="fphone" placeholder="+7 (747) 661-93-41" required>
-                </div>
-                <div class="form-group">
-                    <label>ЧТО НУЖНО СДЕЛАТЬ?</label>
-                    <select id="fservice">
-                        <option>Установка зарядки для авто</option>
-                        <option>Замена проводки в квартире</option>
-                        <option>Сборка электрощита</option>
-                        <option>Теплый пол</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label>ДЕТАЛИ</label>
-                    <textarea id="fmsg" rows="3" placeholder="Адрес или описание задачи..."></textarea>
-                </div>
-                <button type="button" class="btn btn-gold" onclick="sendToWA()">ОТПРАВИТЬ В WHATSAPP</button>
+                <div class="form-group"><label>ВАШЕ ИМЯ</label><input type="text" id="fname" required></div>
+                <div class="form-group"><label>ТЕЛЕФОН</label><input type="tel" id="fphone" placeholder="+7..." required></div>
+                <button type="button" class="btn-gold" onclick="sendToWA()">ОТПРАВИТЬ МАСТЕРУ</button>
             </form>
         </div>
     </div>
 </section>
 
-<div class="map-frame">
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2906.7725838573216!2d76.82276037664402!3d43.23519157112521!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x388369dbda10e0c7%3A0x2308290f8c09fdf2!2z0pYQmiAi0KPRiCDQodGD0L3Sm9Cw0YAi!5e0!3m2!1sru!2skz!4v1700000000000!5m2!1sru!2skz"></iframe>
+<div class="map-section">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2906.77028147572!2d76.8288812!3d43.2352125!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3883696894c2e42d%3A0xc3f925b6823c1471!2z0pYQmiAi0KPRiCDQodGD0L3Sm9Cw0YAi!5e0!3m2!1sru!2skz!4v1700000000000"></iframe>
 </div>
 
 <footer>
     <div class="container">
-        <p style="font-family: 'Montserrat'; font-weight: 900; font-size: 20px;">ELECTROMON</p>
-        <p style="margin: 10px 0; font-size: 12px; color: #888;">ИП ELECTROMON • БИН 920404450249<br>Алматы, мкр. Аксай-5, д. 25 (ЖК Уш Сункар)</p>
-        <div class="social-links">
-            <a href="https://wa.me/77476619341"><i class="fab fa-whatsapp"></i></a>
-            <a href="https://instagram.com/electromon.kz"><i class="fab fa-instagram"></i></a>
+        <p style="font-family: 'Montserrat'; font-weight: 900;">ELECTROMON ALMATY</p>
+        <p style="font-size: 13px; color: #888;">мкр. Аксай-5, 25 (ЖК Уш Сункар)</p>
+        <div style="margin-top: 15px;">
+            <a href="https://wa.me/77476619341" style="color: #25d366; font-size: 24px; margin: 0 10px;"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://instagram.com/electromon.kz" style="color: #e1306c; font-size: 24px; margin: 0 10px;"><i class="fab fa-instagram"></i></a>
         </div>
-        <p style="font-size: 10px; opacity: 0.5;">© 2026 ELECTROMON. ВСЁ БУДЕТ ЧЁТКО.</p>
     </div>
 </footer>
 
 <script>
+    function calculate() {
+        let pts = document.getElementById('points').value;
+        let shield = parseInt(document.getElementById('shield').value);
+        document.getElementById('pointVal').innerText = pts;
+        let total = (pts * 3000) + shield + 15000;
+        document.getElementById('totalPrice').innerText = total.toLocaleString() + " ₸";
+    }
+
+    window.onload = function() {
+        calculate();
+        new QRCode(document.getElementById("qrcode"), {
+            text: "https://wa.me/77476619341",
+            width: 130, height: 130, colorDark : "#000000", colorLight : "#ffffff", correctLevel : QRCode.CorrectLevel.H
+        });
+    }
+
     function sendToWA() {
         let name = document.getElementById('fname').value;
         let phone = document.getElementById('fphone').value;
-        let service = document.getElementById('fservice').value;
-        let msg = document.getElementById('fmsg').value;
-        if(!name || !phone) { alert('Пожалуйста, заполните имя и телефон'); return; }
-        let text = `⚡ ЗАЯВКА ELECTROMON:%0A👤 Имя: ${name}%0A📞 Тел: ${phone}%0A🛠 Услуга: ${service}%0A📝 Детали: ${msg}`;
+        let price = document.getElementById('totalPrice').innerText;
+        if(!name || !phone) { alert('Заполните данные'); return; }
+        let text = `⚡ ЗАЯВКА ELECTROMON:%0A👤 Имя: ${name}%0A📞 Тел: ${phone}%0A💰 Расчет: ${price}`;
         window.open(`https://wa.me/77476619341?text=${text}`, '_blank');
     }
 </script>

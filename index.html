@@ -1,255 +1,164 @@
-<!DOCTYPE html>
+         <!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>ELECTROMON | Электромонтаж в Алматы</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <meta name="google-site-verification" content="w-FcNk_3tlQHiSZvDqM_DSJZ03TeAgnet8qY1jaJKlc" />
+    <meta name="yandex-verification" content="5663554e20986161" />
+
+    <title>ELECTROMON - Профессиональный электромонтаж в Алматы</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
     
     <style>
-        :root { 
-            --gold: #FFC107; 
-            --gold-light: #FFECB3;
-            --dark: #1A1C1E; 
-            --soft-bg: #FFFFFF;
-            --card-shadow: 0 15px 35px rgba(0,0,0,0.07);
+        :root {
+            --primary: #1e3c72;
+            --secondary: #2a5298;
+            --gold: #ffd700;
+            --white: #ffffff;
+            --text: #333;
         }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; outline: none; }
-        body { font-family: 'Geologica', sans-serif; background: var(--soft-bg); color: var(--dark); overflow-x: hidden; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Geologica', sans-serif; line-height: 1.6; color: var(--text); background: #f5f5f5; scroll-behavior: smooth; }
         .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
 
-        /* Кнопка быстрой связи */
-        .call-float {
-            position: fixed; bottom: 30px; right: 30px; width: 65px; height: 65px;
-            background: var(--gold); color: #000; border-radius: 50%;
+        /* МИГАЮЩАЯ КНОПКА WHATSAPP */
+        .floating-call {
+            position: fixed; bottom: 30px; right: 30px; width: 70px; height: 70px;
+            background: #25d366; color: white; border-radius: 50%;
             display: flex; align-items: center; justify-content: center;
-            font-size: 28px; z-index: 9999; box-shadow: 0 10px 25px rgba(255,193,7,0.4);
-            text-decoration: none; animation: pulse 2s infinite;
+            font-size: 35px; z-index: 9999; box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+            text-decoration: none; animation: blink-call 2s infinite;
+        }
+        @keyframes blink-call {
+            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+            70% { transform: scale(1.1); box-shadow: 0 0 0 20px rgba(37, 211, 102, 0); }
+            100% { transform: scale(1); }
         }
 
-        @keyframes pulse {
-            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255,193,7,0.7); }
-            70% { transform: scale(1.1); box-shadow: 0 0 0 20px rgba(255,193,7,0); }
-            100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255,193,7,0); }
+        /* Header */
+        header {
+            background: var(--primary); color: white; padding: 15px 0;
+            position: fixed; width: 100%; top: 0; z-index: 1000;
+        }
+        nav { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 24px; font-weight: 900; letter-spacing: 1px; color: var(--gold); text-decoration: none; }
+
+        /* Hero Section с 3D Заголовком */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+                        url('https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=1200');
+            background-size: cover; background-position: center;
+            padding: 180px 0 120px; text-align: center; color: white;
+        }
+        .hero h1 {
+            font-size: clamp(3rem, 8vw, 5rem); font-weight: 900; color: var(--gold);
+            text-transform: uppercase; margin-bottom: 20px;
+            text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 
+                         0 5px 0 #aaa, 0 10px 20px rgba(0,0,0,0.5);
         }
 
-        /* Навигация */
-        header { 
-            background: rgba(255,255,255,0.95); backdrop-filter: blur(10px); 
-            padding: 15px 0; position: fixed; width: 100%; top: 0; z-index: 1000;
-            border-bottom: 1px solid #f0f0f0;
-        }
-        .nav { display: flex; justify-content: space-between; align-items: center; }
-        .logo { font-weight: 900; font-size: 24px; color: #000; text-decoration: none; letter-spacing: -1px; }
-        .logo span { color: var(--gold); }
-
-        /* Главный блок */
-        .hero { padding: 160px 0 80px; text-align: center; background: radial-gradient(circle at 50% 50%, #fff9e6 0%, #ffffff 100%); }
-        .hero h1 { font-size: clamp(2.5rem, 8vw, 4rem); font-weight: 900; margin-bottom: 20px; line-height: 1; }
-        .hero p { font-size: 1.2rem; color: #555; max-width: 700px; margin: 0 auto; }
-
-        /* Завлекательные рамочки услуг */
-        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; padding: 60px 0; }
+        /* УСЛУГИ С КРАСИВЫМИ РАМКАМИ */
+        .services { padding: 80px 0; background: white; }
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
         
-        .s-card { 
-            background: #fff; border-radius: 30px; padding: 40px; 
-            border: 2px solid transparent; box-shadow: var(--card-shadow);
-            transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            position: relative; overflow: hidden;
-            display: flex; flex-direction: column;
+        .service-card {
+            background: #fff; padding: 40px; border-radius: 20px; text-align: center;
+            position: relative; border: 2px solid #eee; transition: 0.4s; overflow: hidden;
         }
+        .service-card::before {
+            content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 5px;
+            background: var(--gold); transform: scaleX(0); transition: 0.4s;
+        }
+        .service-card:hover { transform: translateY(-10px); border-color: var(--gold); box-shadow: 0 15px 35px rgba(0,0,0,0.1); }
+        .service-card:hover::before { transform: scaleX(1); }
+        .service-icon { font-size: 50px; margin-bottom: 20px; display: block; }
+
+        /* КАЛЬКУЛЯТОР */
+        .calculator { padding: 80px 0; background: var(--primary); color: white; }
+        .calc-container { max-width: 600px; margin: 0 auto; background: rgba(255,255,255,0.1); padding: 40px; border-radius: 30px; backdrop-filter: blur(10px); }
+        input[type="range"] { width: 100%; margin: 20px 0; accent-color: var(--gold); }
+        .price-display { font-size: 3rem; color: var(--gold); font-weight: 900; text-align: center; margin-top: 20px; }
+
+        /* КАРТА */
+        .map-section { line-height: 0; position: relative; }
+        .map-section iframe { width: 100%; height: 450px; border: 0; }
+
+        /* КОНТАКТЫ */
+        .contact { padding: 80px 0; background: #f8f9fa; }
+        .contact-flex { display: flex; flex-wrap: wrap; gap: 40px; }
+        .qr-box { flex: 1; text-align: center; background: white; padding: 30px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); min-width: 250px; }
         
-        .s-card::before {
-            content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 6px;
-            background: linear-gradient(90deg, var(--gold), #FFD54F); opacity: 0; transition: 0.3s;
-        }
+        .map-links { display: flex; gap: 10px; margin-top: 15px; }
+        .btn-map { flex: 1; padding: 12px; border-radius: 10px; text-decoration: none; font-weight: bold; font-size: 14px; text-align: center; transition: 0.3s; display: flex; align-items: center; justify-content: center; gap: 8px; }
+        .btn-yandex { background: #ffcc00; color: black; }
+        .btn-google { background: #4285f4; color: white; }
 
-        .s-card:hover { transform: translateY(-10px); border-color: var(--gold-light); }
-        .s-card:hover::before { opacity: 1; }
-
-        .s-icon { font-size: 40px; color: var(--gold); margin-bottom: 25px; }
-        .s-card h3 { font-size: 1.5rem; font-weight: 800; margin-bottom: 15px; }
-        .s-card p { color: #666; font-size: 1rem; line-height: 1.6; margin-bottom: 25px; flex-grow: 1; }
-        .s-price { font-size: 1.4rem; font-weight: 900; color: #000; border-top: 1px solid #eee; padding-top: 20px; }
-
-        /* Блок с фото */
-        .work-showcase { padding: 80px 0; background: #fafafa; border-radius: 50px; }
-        .work-flex { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; }
-        .work-img { 
-            width: 350px; height: 450px; border-radius: 25px; overflow: hidden; 
-            box-shadow: var(--card-shadow); border: 5px solid #fff;
-        }
-        .work-img img { width: 100%; height: 100%; object-fit: cover; }
-
-        /* Калькулятор в новом стиле */
-        .calc-section { padding: 100px 0; background: #111; color: #fff; border-radius: 60px; margin: 40px 20px; }
-        .calc-box { max-width: 600px; margin: 0 auto; }
-        input[type="range"] { width: 100%; height: 8px; border-radius: 10px; accent-color: var(--gold); margin: 30px 0; }
-        .total-display { background: rgba(255,193,7,0.1); padding: 30px; border-radius: 25px; text-align: center; border: 2px dashed var(--gold); }
-        .total-display h2 { font-size: 3rem; color: var(--gold); }
-
-        /* Форма и QR для визиток */
-        .contact-block { padding: 80px 0; }
-        .contact-flex { 
-            background: #fff; border-radius: 40px; padding: 50px; 
-            box-shadow: var(--card-shadow); display: flex; flex-wrap: wrap; gap: 50px; align-items: center;
-        }
-        .qr-box { flex: 1; text-align: center; min-width: 250px; padding: 20px; background: #fdfdfd; border-radius: 30px; border: 1px solid #eee; }
-        .form-box { flex: 2; min-width: 300px; }
-        
-        input, select { 
-            width: 100%; padding: 20px; border-radius: 15px; border: 1px solid #ddd; 
-            margin-bottom: 15px; font-family: inherit; font-size: 1rem;
-        }
-        .btn-send { 
-            background: var(--gold); color: #000; border: none; padding: 22px; 
-            width: 100%; border-radius: 15px; font-weight: 900; cursor: pointer; font-size: 1.1rem;
-        }
-
-        /* Футер */
-        footer { padding: 60px 0; text-align: center; background: #fff; }
-        .loc-badge { display: inline-block; padding: 10px 20px; background: #f0f0f0; border-radius: 50px; margin-bottom: 20px; font-weight: 700; }
-
-        @media (max-width: 768px) {
-            .contact-flex { flex-direction: column-reverse; padding: 30px 20px; }
-            .hero h1 { font-size: 2.5rem; }
-        }
+        .btn-gold { background: var(--gold); color: #000; padding: 15px 40px; border-radius: 50px; font-weight: 900; text-decoration: none; display: inline-block; transition: 0.3s; }
+        .btn-gold:hover { transform: scale(1.05); }
     </style>
 </head>
 <body>
 
-    <a href="tel:+77476619341" class="call-float"><i class="fas fa-phone"></i></a>
+    <a href="https://wa.me/77476619341" class="floating-call"><i class="fab fa-whatsapp"></i></a>
 
     <header>
         <div class="container nav">
-            <a href="#" class="logo">ELECTRO<span>MON</span></a>
-            <div style="font-weight: 700;">+7 (747) 661-93-41</div>
+            <a href="#" class="logo">⚡ ELECTROMON</a>
+            <div style="font-weight: bold;"><i class="fas fa-phone"></i> +7 (747) 661-93-41</div>
         </div>
     </header>
 
-    <section class="hero container">
-        <h1>Мастерская <span>умного</span> электромонтажа</h1>
-        <p>Делаем электрику, за которую не стыдно. Всегда рядом в <b>ЖК Уш Сункар</b> и по всему Алматы. Даем официальную гарантию на все работы.</p>
-    </section>
-
-    <section class="container">
-        <div class="services-grid">
-            <div class="s-card">
-                <div class="s-icon"><i class="fas fa-charging-station"></i></div>
-                <h3>Зарядки EV</h3>
-                <p>Установка зарядных станций для Zeekr, Tesla, Audi. Подбор кабеля под мощность вашей сети.</p>
-                <div class="s-price">от 25 000 ₸</div>
-            </div>
-            <div class="s-card">
-                <div class="s-icon"><i class="fas fa-shield-virus"></i></div>
-                <h3>Монтаж щитов</h3>
-                <p>Сборка электрощитов с защитой от перепадов напряжения. Только качественные комплектующие.</p>
-                <div class="s-price">от 15 000 ₸</div>
-            </div>
-            <div class="s-card">
-                <div class="s-icon"><i class="fas fa-house-user"></i></div>
-                <h3>Проводка под ключ</h3>
-                <p>Полная замена или монтаж с нуля в новостройках. Работаем чисто, по стандартам ГОСТ.</p>
-                <div class="s-price">от 8 000 ₸ <span>/точка</span></div>
-            </div>
+    <section class="hero">
+        <div class="container">
+            <h1>ELECTROMON</h1>
+            <p style="font-size: 1.5rem; margin-bottom: 30px;">Профессиональный электромонтаж в Алматы</p>
+            <a href="tel:+77476619341" class="btn-gold">ВЫЗВАТЬ МАСТЕРА</a>
         </div>
     </section>
 
-    <section class="work-showcase">
+    <section class="services" id="services">
         <div class="container">
-            <h2 style="text-align:center; margin-bottom:40px; font-weight:900;">НАШИ РЕАЛЬНЫЕ РАБОТЫ</h2>
-            <div class="work-flex">
-                <div class="work-img">
-                    <img src="https://i.ibb.co/C5fLz1S/IMG-20260209-WA0056.jpg" alt="Монтаж щита">
+            <h2 style="text-align: center; font-size: 32px; margin-bottom: 50px;">НАШИ УСЛУГИ</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <span class="service-icon">🔋</span>
+                    <h3>Зарядки EV</h3>
+                    <p>Установка станций для Zeekr, Tesla, Avatr. Подбор мощности и кабеля.</p>
                 </div>
-                <div class="work-img">
-                    <img src="https://i.ibb.co/vYm0F0B/IMG-20260129-WA0065-1.jpg" alt="Зарядка Audi">
+                <div class="service-card">
+                    <span class="service-icon">👣</span>
+                    <h3>Теплый пол</h3>
+                    <p>Монтаж электрического теплого пола и терморегуляторов под ключ.</p>
+                </div>
+                <div class="service-card">
+                    <span class="service-icon">⚡</span>
+                    <h3>Электрощиты</h3>
+                    <p>Сборка и модернизация щитов. Установка защиты от скачков напряжения.</p>
+                </div>
+                <div class="service-card">
+                    <span class="service-icon">🛠️</span>
+                    <h3>Полный монтаж</h3>
+                    <p>Электрика в новостройках и вторичном жилье. Работаем по ГОСТу.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="calc-section">
-        <div class="calc-box container">
-            <h2 style="text-align:center; margin-bottom:20px;">ПРИМЕРНЫЙ РАСЧЕТ</h2>
-            <div style="display:flex; justify-content:space-between; font-weight:700;">
-                <span>Количество точек (розетки/свет):</span>
-                <span id="pCount" style="color:var(--gold);">10</span>
-            </div>
-            <input type="range" id="pRange" min="1" max="100" value="10" oninput="doCalc()">
-            
-            <div class="total-display">
-                <p style="margin-bottom:10px; opacity:0.7;">Ориентировочная стоимость:</p>
-                <h2 id="pTotal">45 000 ₸</h2>
-            </div>
-        </div>
-    </section>
-
-    <section class="container contact-block" id="order">
-        <div class="contact-flex">
-            <div class="qr-box">
-                <div id="qrcode" style="display:flex; justify-content:center;"></div>
-                <p class="qr-label">QR ДЛЯ ВАШЕЙ ВИЗИТКИ<br>(ведет на этот сайт)</p>
-            </div>
-            <div class="form-box">
-                <h2 style="margin-bottom:25px; font-weight:900;">ОБСУДИТЬ ПРОЕКТ</h2>
-                <form id="waForm">
-                    <input type="text" id="wName" placeholder="Как вас зовут?" required>
-                    <input type="tel" id="wPhone" placeholder="Ваш телефон" required>
-                    <select id="wService">
-                        <option>Замена проводки</option>
-                        <option>Зарядка для авто</option>
-                        <option>Монтаж щитка</option>
-                    </select>
-                    <button type="button" class="btn-send" onclick="sendWA()">ОТПРАВИТЬ МАСТЕРУ</button>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <footer>
+    <section class="calculator">
         <div class="container">
-            <div class="loc-badge"><i class="fas fa-map-marker-alt"></i> мкр. Аксай-5, 25 (ЖК Уш Сункар)</div>
-            <p style="font-weight:900; letter-spacing:3px;">ELECTROMON</p>
-            <p style="font-size:12px; color:#aaa; margin-top:10px;">БИН 920404450249 | 2026</p>
-            <div style="margin-top:20px; font-size:24px;">
-                <a href="https://wa.me/77476619341" style="color:#25d366; margin:0 10px;"><i class="fab fa-whatsapp"></i></a>
-                <a href="https://instagram.com/electromon.kz" style="color:#e1306c; margin:0 10px;"><i class="fab fa-instagram"></i></a>
+            <h2 style="text-align: center; margin-bottom: 40px;">РАСЧЕТ СТОИМОСТИ</h2>
+            <div class="calc-container">
+                <p>Количество точек (розетки/выключатели): <b id="pointCount" style="color:var(--gold);">10</b></p>
+                <input type="range" id="points" min="1" max="150" value="10" oninput="calculate()">
+                <div class="price-display" id="totalPrice">45 000 ₸</div>
+                <p style="text-align:center; font-size:12px; margin-top:10px; opacity:0.8;">* Окончательная цена после замера</p>
             </div>
         </div>
-    </footer>
+    </section>
 
-    <script>
-        function doCalc() {
-            let pts = document.getElementById('pRange').value;
-            document.getElementById('pCount').innerText = pts;
-            let total = (pts * 3000) + 15000;
-            document.getElementById('pTotal').innerText = total.toLocaleString() + " ₸";
-        }
-
-        window.onload = function() {
-            doCalc();
-            // QR-код теперь ведет на текущий сайт (window.location.href)
-            new QRCode(document.getElementById("qrcode"), {
-                text: window.location.href,
-                width: 180, height: 180,
-                colorDark : "#000000", colorLight : "#ffffff",
-                correctLevel : QRCode.CorrectLevel.H
-            });
-        }
-
-        function sendWA() {
-            let name = document.getElementById('wName').value;
-            let phone = document.getElementById('wPhone').value;
-            let srv = document.getElementById('wService').value;
-            if(!name || !phone) { alert('Заполните поля'); return; }
-            let msg = `⚡ ЗАЯВКА С САЙТА:%0AИмя: ${name}%0AТел: ${phone}%0AУслуга: ${srv}`;
-            window.open(`https://wa.me/77476619341?text=${msg}`, '_blank');
-        }
-    </script>
-</body>
-</html>
+    <section class="map-section">
+        <iframe src="

@@ -4,108 +4,136 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="google-site-verification" content="w-FcNk_5tlQHGsZDqDN_D5JZ03TeAgnet8qY1jaJKlc" />
-    <meta name="yandex-verification" content="2b9fcc2b67b3ae12" />
-    <title>ELECTROMON — Профессиональный электромонтаж Алматы</title>
-    
+    <title>ELECTROMON | Электромонтаж Алматы</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <style>
-        :root { --gold: #c5a059; --dark: #0f0f0f; --light: #e0e0e0; }
-        body { font-family: 'Helvetica Neue', Arial, sans-serif; background: var(--dark); color: white; margin: 0; }
-        
-        header {
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1621905251189-08b45d6a269e?q=80&w=2069&auto=format&fit=crop');
-            background-size: cover; background-position: center;
-            padding: 80px 20px; text-align: center; border-bottom: 2px solid var(--gold);
-        }
-        .hero-title { font-size: 3.5em; font-weight: 700; letter-spacing: 8px; margin: 0; color: white; }
-        .hero-subtitle { color: var(--gold); font-size: 1.1em; letter-spacing: 3px; margin-top: 15px; text-transform: uppercase; }
+        :root { --gold: #c5a059; --dark: #0d0d0d; --card: #1a1a1a; }
+        * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
+        body { font-family: 'Open Sans', sans-serif; background: var(--dark); color: #fff; }
 
-        .container { max-width: 1100px; margin: 0 auto; padding: 50px 20px; }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
 
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
-        .card {
-            background: #1a1a1a; border: 1px solid #333; padding: 40px; border-radius: 4px;
-            transition: 0.3s; text-align: left; position: relative; overflow: hidden;
-        }
-        .card:hover { border-color: var(--gold); transform: translateY(-5px); }
-        .card i { font-size: 32px; color: var(--gold); margin-bottom: 20px; }
-        .card h3 { font-size: 1.5em; margin-bottom: 15px; }
+        /* Шапка */
+        header { background: rgba(0,0,0,0.9); padding: 20px 0; position: fixed; width: 100%; top: 0; z-index: 1000; border-bottom: 1px solid var(--gold); }
+        nav { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-family: 'Montserrat'; font-size: 24px; font-weight: 800; }
+        .logo span { color: var(--gold); }
 
-        .calculator {
-            background: #f9f9f9; color: #1a1a1a; padding: 40px; border-radius: 4px; margin-top: 60px;
+        /* Главный экран */
+        .hero { 
+            height: 70vh; 
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1621905251189-08b45d6a269e?q=80&w=2069');
+            background-size: cover; display: flex; align-items: center; text-align: center; 
         }
-        .calc-item { display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; padding: 10px 0; border-bottom: 1px solid #ddd; }
-        .calc-item input { width: 60px; padding: 8px; border: 1px solid #ccc; text-align: center; }
-        .total { font-size: 28px; font-weight: bold; text-align: right; color: #000; margin-top: 30px; border-top: 2px solid var(--gold); padding-top: 15px; }
+        .hero h1 { font-family: 'Montserrat'; font-size: 3rem; width: 100%; }
 
-        .master-card {
-            background: #1a1a1a; border-left: 5px solid var(--gold); padding: 40px; margin-top: 60px;
-            display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+        /* КАЛЬКУЛЯТОР С ПЕЧАТЬЮ */
+        .calc-section { padding: 100px 0; background: #f9f9f9; color: #333; }
+        .calc-card { 
+            background: #fff; 
+            max-width: 600px; 
+            margin: 0 auto; 
+            padding: 50px; 
+            border-radius: 15px; 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            position: relative; 
+            overflow: hidden; /* Чтобы печать не вылезала за края */
         }
-        .master-info h2 { margin: 0; font-size: 1.8em; color: var(--gold); }
-        .master-info p { font-size: 1.1em; color: #999; }
-        
-        .contact-btns { display: flex; gap: 15px; margin-top: 20px; }
-        .btn {
-            padding: 15px 35px; border-radius: 2px; text-decoration: none; font-weight: bold;
-            text-transform: uppercase; letter-spacing: 1px; transition: 0.3s;
+        /* Слой с печатью */
+        .calc-card::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 300px;
+            height: 300px;
+            background: url('IMG-20231127-WA0293.jpg') no-repeat center;
+            background-size: contain;
+            transform: translate(-50%, -50%) rotate(-15deg);
+            opacity: 0.07; /* Делаем печать очень бледной как водяной знак */
+            pointer-events: none;
         }
-        .btn-wa { background: #25d366; color: white; }
-        .btn-call { border: 1px solid var(--gold); color: var(--gold); }
-        .btn:hover { opacity: 0.8; }
+
+        .calc-row { display: flex; justify-content: space-between; margin-bottom: 20px; font-weight: bold; position: relative; z-index: 2; }
+        .calc-row input { width: 70px; padding: 8px; border: 1px solid #ddd; border-radius: 5px; text-align: center; }
+        .total-price { font-size: 28px; color: #000; text-align: right; border-top: 2px solid var(--gold); padding-top: 15px; margin-top: 20px; }
+
+        /* Контакты */
+        .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; padding: 80px 0; }
+        .insta-box { background: var(--card); padding: 40px; border-radius: 15px; text-align: center; border: 1px solid #333; }
+        .qr-img { width: 200px; border-radius: 10px; margin-bottom: 20px; }
+        .btn-insta { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); color: #fff; padding: 15px 30px; border-radius: 50px; text-decoration: none; font-weight: bold; display: inline-block; }
+
+        footer { text-align: center; padding: 40px; border-top: 1px solid #333; font-size: 14px; color: #777; }
+
+        @media (max-width: 768px) {
+            .contact-grid { grid-template-columns: 1fr; }
+            .hero h1 { font-size: 2rem; }
+        }
     </style>
 </head>
 <body>
 
 <header>
-    <h1 class="hero-title">ELECTROMON</h1>
-    <div class="hero-subtitle">Премиальные инженерные решения в Алматы</div>
+    <div class="container">
+        <nav>
+            <div class="logo">⚡ ELECTRO<span>MON</span></div>
+            <div style="color: var(--gold); font-weight: bold;">г. Алматы</div>
+        </nav>
+    </div>
 </header>
 
-<div class="container">
-    <div class="grid">
-        <div class="card">
-            <i class="fas fa-charging-station"></i>
-            <h3>EV-Charging</h3>
-            <p>Проектирование и установка зарядных станций для электромобилей всех мировых брендов (Tesla, Zeekr, BMW).</p>
-        </div>
-        <div class="card">
-            <i class="fas fa-tools"></i>
-            <h3>Электромонтаж</h3>
-            <p>Комплексные работы в жилых и коммерческих объектах. Профессиональный аудит и замена инженерных сетей.</p>
-        </div>
+<section class="hero">
+    <div class="container">
+        <h1>Профессиональный электромонтаж</h1>
+        <p style="color: var(--gold); margin-top: 20px; font-size: 1.2rem;">Аксай-5 • Гарантия • Качество</p>
     </div>
+</section>
 
-    <div class="calculator">
-        <h2 style="margin-top:0;">Предварительный расчет</h2>
-        <div class="calc-item"><span>Установка точки (розетка/выключатель) - 1500 ₸</span><input type="number" id="p" value="0" min="0" oninput="c()"></div>
-        <div class="calc-item"><span>Замена защитного автомата - 2500 ₸</span><input type="number" id="a" value="0" min="0" oninput="c()"></div>
-        <div class="calc-item"><span>Сборка и монтаж щита - 15000 ₸</span><input type="number" id="s" value="0" min="0" oninput="c()"></div>
-        <div class="total">Ориентировочная стоимость: <span id="res">0</span> ₸</div>
+<section class="calc-section">
+    <div class="container">
+        <h2 style="text-align: center; margin-bottom: 40px; font-family: Montserrat;">Предварительный расчет</h2>
+        <div class="calc-card">
+            <div class="calc-row"><span>Розетки / Выключатели</span><input type="number" id="p" value="0" oninput="recalc()"></div>
+            <div class="calc-row"><span>Замена автоматов</span><input type="number" id="a" value="0" oninput="recalc()"></div>
+            <div class="calc-row"><span>Сборка щита</span><input type="number" id="s" value="0" oninput="recalc()"></div>
+            <div class="total-price">Итого: <span id="res">0</span> ₸</div>
+        </div>
     </div>
+</section>
 
-    <div class="master-card">
-        <div class="master-info">
-            <h2>Мастер Павел</h2>
-            <p>Консультация по техническим вопросам и расчет сметы</p>
-            <div style="font-size: 22px; margin-top: 10px;">+7 (747) 661-93-41</div>
+<section class="container">
+    <div class="contact-grid">
+        <div class="info">
+            <h2 style="font-family: Montserrat; margin-bottom: 20px;">Наши контакты</h2>
+            <p style="font-size: 1.2rem; margin-bottom: 10px;"><i class="fas fa-phone" style="color: var(--gold);"></i> +7 (747) 661-93-41</p>
+            <p style="margin-bottom: 10px;"><i class="fas fa-map-marker-alt" style="color: var(--gold);"></i> Алматы, Аксай-5, дом 25</p>
+            <p><i class="fab fa-whatsapp" style="color: #25d366;"></i> Мастер Павел</p>
         </div>
-        <div class="contact-btns">
-            <a href="https://wa.me/77476619341" class="btn btn-wa">WhatsApp</a>
-            <a href="tel:+77476619341" class="btn btn-call">Позвонить</a>
+        
+        <div class="insta-box">
+            <h3>Мы в Instagram</h3>
+            <p style="margin-bottom: 20px; color: #aaa;">Сканируйте QR или переходите по ссылке</p>
+            <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://www.instagram.com/electromon.kz" class="qr-img" alt="QR Code">
+            <br>
+            <a href="https://www.instagram.com/electromon.kz" target="_blank" class="btn-insta">@electromon.kz</a>
         </div>
     </div>
-</div>
+</section>
+
+<footer>
+    <p>&copy; 2026 ИП ELECTROMON. Работаем по Алматы и области.</p>
+</footer>
 
 <script>
-    function c() {
-        let res = (document.getElementById('p').value * 1500) + 
-                  (document.getElementById('a').value * 2500) + 
-                  (document.getElementById('s').value * 15000);
-        document.getElementById('res').innerText = res.toLocaleString();
+    function recalc() {
+        let p = document.getElementById('p').value * 1500;
+        let a = document.getElementById('a').value * 2500;
+        let s = document.getElementById('s').value * 15000;
+        document.getElementById('res').innerText = (p + a + s).toLocaleString('ru-RU');
     }
 </script>
 
 </body>
-</html> 
+</html>

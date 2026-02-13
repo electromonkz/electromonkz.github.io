@@ -17,7 +17,7 @@
         body { font-family: 'Open Sans', sans-serif; background: #fdfdfd; color: #333; line-height: 1.6; overflow-x: hidden; }
         .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
 
-        /* Плавающая кнопка связи (Адаптивная) */
+        /* Плавающая кнопка связи */
         .floating-contact {
             position: fixed; bottom: 20px; right: 20px; z-index: 9999;
             background: var(--gold); color: #000; width: 60px; height: 60px;
@@ -40,21 +40,17 @@
         .hero h1 span { color: var(--gold); -webkit-text-stroke: 1px #000; }
         .hero p { font-size: clamp(1rem, 3vw, 1.2rem); color: #666; max-width: 800px; margin: 0 auto 40px; }
 
-        /* Карточки тарифов */
+        /* Карточки цен */
         section { padding: 80px 0; }
         .section-title { text-align: center; font-family: 'Montserrat'; font-size: clamp(1.8rem, 5vw, 2.5rem); font-weight: 900; margin-bottom: 50px; position: relative; }
         .section-title::after { content: ''; display: block; width: 50px; height: 5px; background: var(--gold); margin: 15px auto; border-radius: 10px; }
 
         .price-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-        .card { 
-            background: #fff; border-radius: 20px; padding: 40px 30px; border: 1px solid #eee; transition: 0.4s; position: relative;
-            display: flex; flex-direction: column; justify-content: space-between;
-        }
+        .card { background: #fff; border-radius: 20px; padding: 40px 30px; border: 1px solid #eee; transition: 0.4s; position: relative; display: flex; flex-direction: column; justify-content: space-between; }
         .card:hover { transform: translateY(-10px); box-shadow: var(--shadow); border-color: var(--gold); }
         .card.featured { border: 2px solid var(--gold); background: #fffdf5; }
         .card-badge { position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background: #000; color: var(--gold); padding: 5px 20px; border-radius: 20px; font-size: 12px; font-weight: 800; }
         
-        .card h3 { font-family: 'Montserrat'; font-size: 22px; margin-bottom: 15px; }
         .price-tag { font-size: 32px; font-weight: 900; margin-bottom: 20px; color: #000; }
         .price-tag span { font-size: 14px; color: #888; font-weight: 400; }
         
@@ -63,41 +59,36 @@
         .feature-list li i { color: #2ecc71; }
 
         /* Кнопки */
-        .btn { 
-            display: inline-block; padding: 18px 30px; border-radius: 12px; font-family: 'Montserrat'; font-weight: 800; 
-            text-decoration: none; text-align: center; transition: 0.3s; border: none; cursor: pointer; width: 100%;
-        }
+        .btn { display: inline-block; padding: 18px 30px; border-radius: 12px; font-family: 'Montserrat'; font-weight: 800; text-decoration: none; text-align: center; transition: 0.3s; border: none; cursor: pointer; width: 100%; }
         .btn-gold { background: var(--gold); color: #000; box-shadow: 0 5px 15px rgba(255,193,7,0.3); }
         .btn-gold:hover { background: #000; color: var(--gold); }
-        .btn-dark { background: #121212; color: #fff; }
 
         /* Услуги иконками */
-        .services-mini { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 15px; }
+        .services-mini { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 15px; }
         .mini-card { background: #fff; padding: 20px; border-radius: 15px; text-align: center; border: 1px solid #f0f0f0; transition: 0.3s; }
-        .mini-card:hover { border-color: var(--gold); background: var(--gold); color: #000; }
-        .mini-card i { font-size: 30px; margin-bottom: 10px; display: block; }
-        .mini-card span { font-size: 13px; font-weight: 700; font-family: 'Montserrat'; }
+        .mini-card i { font-size: 30px; margin-bottom: 10px; display: block; color: var(--gold); }
+        .mini-card span { font-size: 12px; font-weight: 700; font-family: 'Montserrat'; }
 
         /* Форма анкеты */
         .form-section { background: #121212; color: #fff; border-radius: 30px; padding: 50px 30px; margin-top: 50px; }
         .form-group { margin-bottom: 20px; }
         .form-group label { display: block; margin-bottom: 8px; font-size: 14px; color: var(--gold); font-weight: 600; }
-        .form-group input, .form-group select, .form-group textarea { 
-            width: 100%; padding: 15px; border-radius: 10px; border: 1px solid #333; background: #1e1e1e; color: #fff; font-family: inherit;
-        }
+        .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 15px; border-radius: 10px; border: 1px solid #333; background: #1e1e1e; color: #fff; font-family: inherit; }
+
+        /* КАРТА */
+        .map-frame { height: 450px; width: 100%; border-top: 3px solid var(--gold); margin-top: 50px; }
+        iframe { width: 100%; height: 100%; border: 0; filter: grayscale(0.2); }
 
         /* Футер */
         footer { padding: 60px 0; background: #fff; border-top: 1px solid #eee; text-align: center; }
         .social-links { margin: 25px 0; display: flex; justify-content: center; gap: 20px; }
-        .social-links a { width: 50px; height: 50px; border-radius: 50%; border: 1px solid #eee; display: flex; align-items: center; justify-content: center; color: #333; font-size: 20px; transition: 0.3s; }
-        .social-links a:hover { border-color: var(--gold); color: var(--gold); }
+        .social-links a { width: 50px; height: 50px; border-radius: 50%; border: 1px solid #eee; display: flex; align-items: center; justify-content: center; color: #333; font-size: 22px; transition: 0.3s; text-decoration: none; }
+        .social-links a:hover { border-color: var(--gold); color: var(--gold); transform: scale(1.1); }
 
-        /* Адаптация под мобильные */
         @media (max-width: 600px) {
             .hero { padding: 120px 0 60px; }
-            .price-grid { gap: 40px; }
             .form-section { border-radius: 20px; padding: 30px 20px; }
-            .container { padding: 0 15px; }
+            .map-frame { height: 350px; }
         }
     </style>
 </head>
@@ -110,17 +101,16 @@
 <header>
     <div class="container nav">
         <a href="#" class="logo"><span>⚡</span> ELECTROMON</a>
-        <a href="tel:+77476619341" class="header-phone" style="text-decoration: none; color: #000; font-weight: 800;">+7 (747) 661-93-41</a>
+        <a href="tel:+77476619341" style="text-decoration: none; color: #000; font-weight: 800;">+7 (747) 661-93-41</a>
     </div>
 </header>
 
 <section class="hero">
     <div class="container">
         <h1>Электромонтаж <br><span>УРОВНЯ EXPERT</span></h1>
-        <p>От установки зарядных станций для электрокаров до полной замены проводки под ключ в Алматы. Работаем чисто, надежно, с гарантией.</p>
+        <p>От установки зарядных станций для электрокаров до полной замены проводки под ключ в Алматы (ЖК Уш Сункар). Работаем чисто, надежно, с гарантией.</p>
         <div style="display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;">
             <a href="#order" class="btn btn-gold" style="width: auto;">ЗАПОЛНИТЬ АНКЕТУ</a>
-            <a href="tel:+77476619341" class="btn btn-dark" style="width: auto;">ПОЗВОНИТЬ</a>
         </div>
     </div>
 </section>
@@ -136,7 +126,6 @@
                     <ul class="feature-list">
                         <li><i class="fas fa-check-circle"></i> Замена проводки</li>
                         <li><i class="fas fa-check-circle"></i> Установка розеток</li>
-                        <li><i class="fas fa-check-circle"></i> Проверка цепи</li>
                         <li><i class="fas fa-check-circle"></i> Гарантия 1 год</li>
                     </ul>
                 </div>
@@ -151,8 +140,7 @@
                     <ul class="feature-list">
                         <li><i class="fas fa-check-circle"></i> Tesla, Zeekr, BYD</li>
                         <li><i class="fas fa-check-circle"></i> Кабель под нагрузку</li>
-                        <li><i class="fas fa-check-circle"></i> Свой автомат защиты</li>
-                        <li><i class="fas fa-check-circle"></i> Паркинг/Частный дом</li>
+                        <li><i class="fas fa-check-circle"></i> Паркинг / Частный дом</li>
                     </ul>
                 </div>
                 <a href="#order" class="btn btn-gold">ВЫБРАТЬ</a>
@@ -165,8 +153,7 @@
                     <ul class="feature-list">
                         <li><i class="fas fa-check-circle"></i> Электрика "под ключ"</li>
                         <li><i class="fas fa-check-circle"></i> Сборка щита (бесплатно)</li>
-                        <li><i class="fas fa-check-circle"></i> Теплый пол</li>
-                        <li><i class="fas fa-check-circle"></i> Договор и гарантия</li>
+                        <li><i class="fas fa-check-circle"></i> Договор и чек</li>
                     </ul>
                 </div>
                 <a href="#order" class="btn btn-gold">ВЫБРАТЬ</a>
@@ -200,7 +187,7 @@
                 </div>
                 <div class="form-group">
                     <label>ВАШ ТЕЛЕФОН</label>
-                    <input type="tel" id="fphone" placeholder="+7 (___) ___-__-__" required>
+                    <input type="tel" id="fphone" placeholder="+7 (747) 661-93-41" required>
                 </div>
                 <div class="form-group">
                     <label>ЧТО НУЖНО СДЕЛАТЬ?</label>
@@ -208,30 +195,32 @@
                         <option>Установка зарядки для авто</option>
                         <option>Замена проводки в квартире</option>
                         <option>Сборка электрощита</option>
-                        <option>Мелкий ремонт/розетки</option>
                         <option>Теплый пол</option>
                     </select>
                 </div>
                 <div class="form-group">
-                    <label>ДЕТАЛИ (АДРЕС, МОДЕЛЬ АВТО И Т.Д.)</label>
-                    <textarea id="fmsg" rows="3" placeholder="Напишите подробности..."></textarea>
+                    <label>ДЕТАЛИ</label>
+                    <textarea id="fmsg" rows="3" placeholder="Адрес или описание задачи..."></textarea>
                 </div>
-                <button type="button" class="btn btn-gold" style="font-size: 16px;" onclick="sendToWA()">ОТПРАВИТЬ В WHATSAPP</button>
+                <button type="button" class="btn btn-gold" onclick="sendToWA()">ОТПРАВИТЬ В WHATSAPP</button>
             </form>
         </div>
     </div>
 </section>
 
+<div class="map-frame">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2906.7725838573216!2d76.82276037664402!3d43.23519157112521!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x388369dbda10e0c7%3A0x2308290f8c09fdf2!2z0pYQmiAi0KPRiCDQodGD0L3Sm9Cw0YAi!5e0!3m2!1sru!2skz!4v1700000000000!5m2!1sru!2skz"></iframe>
+</div>
+
 <footer>
     <div class="container">
         <p style="font-family: 'Montserrat'; font-weight: 900; font-size: 20px;">ELECTROMON</p>
-        <p style="margin: 10px 0; font-size: 12px; color: #888;">ИП ELECTROMON • БИН 920404450249<br>Алматы, ЖК Уш Сункар</p>
+        <p style="margin: 10px 0; font-size: 12px; color: #888;">ИП ELECTROMON • БИН 920404450249<br>Алматы, мкр. Аксай-5, д. 25 (ЖК Уш Сункар)</p>
         <div class="social-links">
             <a href="https://wa.me/77476619341"><i class="fab fa-whatsapp"></i></a>
             <a href="https://instagram.com/electromon.kz"><i class="fab fa-instagram"></i></a>
-            <a href="mailto:dgladar@gmail.com"><i class="far fa-envelope"></i></a>
         </div>
-        <p style="font-size: 10px; opacity: 0.5;">© 2026 ELECTROMON. ПРОФЕССИОНАЛЬНО И БЕЗОПАСНО.</p>
+        <p style="font-size: 10px; opacity: 0.5;">© 2026 ELECTROMON. ВСЁ БУДЕТ ЧЁТКО.</p>
     </div>
 </footer>
 
@@ -241,9 +230,7 @@
         let phone = document.getElementById('fphone').value;
         let service = document.getElementById('fservice').value;
         let msg = document.getElementById('fmsg').value;
-        
-        if(!name || !phone) { alert('Пожалуйста, заполните Ваше имя и номер телефона'); return; }
-
+        if(!name || !phone) { alert('Пожалуйста, заполните имя и телефон'); return; }
         let text = `⚡ ЗАЯВКА ELECTROMON:%0A👤 Имя: ${name}%0A📞 Тел: ${phone}%0A🛠 Услуга: ${service}%0A📝 Детали: ${msg}`;
         window.open(`https://wa.me/77476619341?text=${text}`, '_blank');
     }

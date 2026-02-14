@@ -1,19 +1,20 @@
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- SEO Meta Tags -->
-    <title>Электрик Алматы | ELECTROMON - Установка зарядок для электромобилей, замена проводки</title>
-    <meta name="description" content="Профессиональный электрик в Алматы. Установка зарядных станций Zeekr, Tesla, Audi, BYD. Замена проводки, сборка щитов. Гарантия. ЖК Уш Сункар. Звоните: +7 (747) 661-93-41">
-    <meta name="keywords" content="электрик алматы, установка зарядной станции алматы, электромонтаж алматы, замена проводки алматы, зарядка для электромобиля алматы, электрик аксай, электрик уш сункар">
+    <title>Павел Пономарёв — Электрик в Алматы | ELECTROMON</title>
+    <meta name="description" content="Профессиональный электрик Павел Пономарёв в Алматы. 10+ лет опыта, установка зарядных станций Zeekr, Tesla, Audi. Гарантия 3 года. ЖК Уш Сункар.">
+    <meta name="keywords" content="электрик алматы, Пономарёв Павел, установка зарядной станции алматы, электромонтаж алматы, замена проводки алматы">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="ELECTROMON - Электрик в Алматы | Зарядки для электромобилей">
-    <meta property="og:description" content="Профессиональный электромонтаж в Алматы. Установка зарядных станций, замена проводки. Гарантия на все работы.">
+    <meta property="og:title" content="Павел Пономарёв — Электрик в Алматы">
+    <meta property="og:description" content="10+ лет опыта. Установка зарядок для электромобилей, сборка щитов. Гарантия 3 года.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://electromonkz.github.io">
+    <meta property="og:image" content="https://electromonkz.github.io/IMG_20260214_223831.jpg">
     
     <!-- Verification -->
     <meta name="google-site-verification" content="w-FcNk_3tlQHiSZvDqM_DSJZ03TeAgnet8qY1jaJKlc" />
@@ -133,7 +134,7 @@
 
         /* Hero */
         .hero { 
-            padding: 140px 0 60px; 
+            padding: 140px 0 80px; 
             background: linear-gradient(135deg, var(--primary) 0%, #1a1a2e 100%);
             color: var(--white);
             position: relative;
@@ -176,15 +177,16 @@
         }
         
         .hero h2 { 
-            font-size: 48px; 
+            font-size: 42px; 
             font-weight: 900; 
             line-height: 1.1; 
-            margin-bottom: 20px;
+            margin-bottom: 15px;
         }
         
         .hero h2 span { 
             color: var(--accent);
             display: block;
+            font-size: 36px;
         }
         
         .hero-desc { 
@@ -263,10 +265,12 @@
 
         .hero-visual {
             position: relative;
+            text-align: center;
         }
         
         .hero-image {
             width: 100%;
+            max-width: 400px;
             border-radius: 20px;
             box-shadow: 0 30px 60px rgba(0,0,0,0.4);
             border: 3px solid rgba(255,199,0,0.2);
@@ -275,7 +279,7 @@
         .hero-stats {
             position: absolute;
             bottom: -20px;
-            left: -20px;
+            left: 0;
             background: var(--white);
             color: var(--primary);
             padding: 20px 25px;
@@ -332,6 +336,79 @@
         .trust-item small {
             font-size: 12px;
             color: var(--gray);
+        }
+
+        /* About Section */
+        .about {
+            padding: 100px 0;
+            background: var(--white);
+        }
+        
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+        
+        .about-images {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        
+        .about-image {
+            width: 100%;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        
+        .about-image:hover {
+            transform: scale(1.02);
+        }
+        
+        .about-image.main {
+            grid-column: 1 / -1;
+            aspect-ratio: 4/3;
+            object-fit: cover;
+        }
+        
+        .about-text h3 {
+            font-size: 36px;
+            font-weight: 900;
+            margin-bottom: 20px;
+            color: var(--primary);
+        }
+        
+        .about-text h3 span {
+            color: var(--accent-dark);
+        }
+        
+        .about-text p {
+            color: var(--gray);
+            font-size: 16px;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+        
+        .about-features {
+            list-style: none;
+            margin: 30px 0;
+        }
+        
+        .about-features li {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 15px;
+            font-size: 15px;
+        }
+        
+        .about-features i {
+            color: var(--accent);
+            font-size: 18px;
         }
 
         /* Services */
@@ -393,9 +470,10 @@
         
         .service-image {
             width: 100%;
-            height: 200px;
+            height: 220px;
             object-fit: cover;
             background: #f0f0f0;
+            cursor: pointer;
         }
         
         .service-content {
@@ -498,20 +576,6 @@
             position: relative;
         }
         
-        .portfolio::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('https://raw.githubusercontent.com/electromonkz/electromonkz.github.io/main/IMG-20231127-WA0293.jpg');
-            background-size: 400px;
-            background-position: center;
-            opacity: 0.03;
-            pointer-events: none;
-        }
-        
         .portfolio-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -526,6 +590,7 @@
             overflow: hidden;
             aspect-ratio: 4/3;
             box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            cursor: pointer;
         }
         
         .portfolio-item img {
@@ -560,6 +625,141 @@
             opacity: 0.9;
         }
 
+        /* Documents Section */
+        .documents {
+            padding: 100px 0;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+        }
+        
+        .documents-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .document-card {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.06);
+            text-align: center;
+            transition: all 0.3s;
+        }
+        
+        .document-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+        }
+        
+        .document-icon {
+            width: 80px;
+            height: 80px;
+            background: rgba(255,199,0,0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 32px;
+            color: var(--accent-dark);
+        }
+        
+        .document-card h4 {
+            font-size: 20px;
+            font-weight: 800;
+            margin-bottom: 10px;
+        }
+        
+        .document-card p {
+            color: var(--gray);
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+        
+        .certificate-img {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            margin: 15px 0;
+            cursor: pointer;
+        }
+
+        /* Testimonials */
+        .testimonials {
+            padding: 100px 0;
+            background: var(--bg-light);
+            position: relative;
+        }
+        
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+        
+        .testimonial-card {
+            background: var(--white);
+            border-radius: 24px;
+            padding: 35px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.06);
+            position: relative;
+        }
+        
+        .testimonial-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .testimonial-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: 800;
+            color: var(--primary);
+        }
+        
+        .testimonial-meta h4 {
+            font-size: 18px;
+            font-weight: 800;
+            margin-bottom: 4px;
+        }
+        
+        .testimonial-meta .service-type {
+            font-size: 13px;
+            color: var(--accent-dark);
+            font-weight: 600;
+            background: rgba(255,199,0,0.1);
+            padding: 4px 12px;
+            border-radius: 20px;
+        }
+        
+        .testimonial-rating {
+            display: flex;
+            gap: 4px;
+            margin-bottom: 15px;
+        }
+        
+        .testimonial-rating i {
+            color: var(--accent);
+            font-size: 16px;
+        }
+        
+        .testimonial-text {
+            font-size: 15px;
+            line-height: 1.8;
+            color: var(--text);
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+
         /* Calculator */
         .calc-section { 
             background: var(--primary); 
@@ -569,25 +769,11 @@
             overflow: hidden;
         }
         
-        .calc-section::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            right: -20%;
-            width: 600px;
-            height: 600px;
-            background: var(--accent);
-            opacity: 0.05;
-            border-radius: 50%;
-        }
-        
         .calc-container {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 60px;
             align-items: center;
-            position: relative;
-            z-index: 1;
         }
         
         .calc-info h3 {
@@ -624,7 +810,6 @@
             padding: 40px; 
             border-radius: 24px; 
             border: 1px solid rgba(255,199,0,0.2);
-            backdrop-filter: blur(10px);
         }
         
         .calc-field {
@@ -671,7 +856,6 @@
             background: var(--accent);
             border-radius: 50%;
             cursor: pointer;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
         }
         
         .range-value {
@@ -702,27 +886,18 @@
             color: rgba(255,255,255,0.7);
             margin-bottom: 10px;
             text-transform: uppercase;
-            letter-spacing: 1px;
         }
         
         .total-price { 
             font-size: 48px; 
             font-weight: 900; 
             color: var(--accent);
-            line-height: 1;
-        }
-        
-        .total-note {
-            font-size: 13px;
-            color: rgba(255,255,255,0.5);
-            margin-top: 10px;
         }
 
         /* Request Section */
         .request-section { 
             padding: 100px 0; 
             background: linear-gradient(to bottom, var(--bg-light), var(--white));
-            position: relative;
         }
         
         .request-container {
@@ -780,22 +955,6 @@
             margin-bottom: 20px;
         }
         
-        .qr-code img {
-            width: 100%;
-            height: 100%;
-        }
-        
-        .qr-text {
-            font-weight: 700;
-            color: var(--primary);
-            margin-bottom: 5px;
-        }
-        
-        .qr-subtext {
-            font-size: 13px;
-            color: var(--gray);
-        }
-        
         .request-form { 
             padding: 50px; 
         }
@@ -808,11 +967,6 @@
             font-size: 28px;
             font-weight: 900;
             margin-bottom: 10px;
-        }
-        
-        .form-header p {
-            color: var(--gray);
-            font-size: 15px;
         }
         
         .form-grid {
@@ -838,18 +992,11 @@
             font-family: inherit; 
             font-size: 15px;
             transition: all 0.3s;
-            background: var(--white);
         }
         
         .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
             outline: none;
             border-color: var(--accent);
-            box-shadow: 0 0 0 4px rgba(255,199,0,0.1);
-        }
-        
-        .form-group textarea {
-            resize: vertical;
-            min-height: 100px;
         }
         
         .btn-submit { 
@@ -860,16 +1007,8 @@
             border-radius: 12px; 
             font-weight: 900; 
             cursor: pointer; 
-            transition: all 0.3s; 
             font-size: 16px; 
-            text-transform: uppercase;
             color: var(--primary);
-            box-shadow: 0 10px 30px rgba(255,199,0,0.3);
-        }
-        
-        .btn-submit:hover { 
-            transform: translateY(-2px);
-            box-shadow: 0 15px 40px rgba(255,199,0,0.4);
         }
 
         /* Footer */
@@ -877,7 +1016,6 @@
             background: var(--primary);
             color: var(--white);
             padding: 60px 0 30px;
-            position: relative;
         }
         
         .footer-grid {
@@ -891,9 +1029,6 @@
             font-size: 24px;
             font-weight: 900;
             margin-bottom: 15px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
         }
         
         .footer-brand p {
@@ -916,11 +1051,6 @@
             align-items: center;
             gap: 10px;
             font-size: 15px;
-            transition: color 0.3s;
-        }
-        
-        .footer-contact a:hover {
-            color: var(--accent);
         }
         
         .footer-title {
@@ -942,11 +1072,6 @@
             color: rgba(255,255,255,0.7);
             text-decoration: none;
             font-size: 14px;
-            transition: color 0.3s;
-        }
-        
-        .footer-links a:hover {
-            color: var(--accent);
         }
         
         .footer-bottom {
@@ -980,50 +1105,63 @@
             color: var(--white);
             box-shadow: 0 10px 30px rgba(0,0,0,0.3);
             transition: all 0.3s;
-            position: relative;
         }
         
         .fab:hover {
-            transform: scale(1.1) translateY(-5px);
+            transform: scale(1.1);
         }
         
         .fab-whatsapp { background: #25d366; }
         .fab-phone { background: var(--accent); color: var(--primary); }
         .fab-instagram { 
             background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
-            font-size: 26px;
+        }
+
+        /* Lightbox */
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.95);
+            z-index: 2000;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
         }
         
-        .fab-label {
+        .lightbox.active {
+            display: flex;
+        }
+        
+        .lightbox img {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 10px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+        }
+        
+        .lightbox-close {
             position: absolute;
-            right: 70px;
-            background: var(--primary);
+            top: 30px;
+            right: 40px;
             color: var(--white);
-            padding: 8px 16px;
-            border-radius: 8px;
-            font-size: 13px;
-            font-weight: 600;
-            white-space: nowrap;
-            opacity: 0;
-            transform: translateX(10px);
-            transition: all 0.3s;
-            pointer-events: none;
+            font-size: 40px;
+            cursor: pointer;
+            opacity: 0.8;
+            transition: opacity 0.3s;
         }
         
-        .fab:hover .fab-label {
+        .lightbox-close:hover {
             opacity: 1;
-            transform: translateX(0);
         }
 
         /* Responsive */
         @media (max-width: 968px) {
-            .hero-content {
+            .hero-content, .about-content, .calc-container, .request-box, .footer-grid {
                 grid-template-columns: 1fr;
-                text-align: center;
-            }
-            
-            .hero-features {
-                align-items: center;
             }
             
             .hero-visual {
@@ -1035,10 +1173,8 @@
                 transform: translateX(-50%);
             }
             
-            .calc-container,
-            .request-box,
-            .footer-grid {
-                grid-template-columns: 1fr;
+            .about-images {
+                order: -1;
             }
             
             .request-qr::before {
@@ -1064,11 +1200,16 @@
                 font-size: 32px;
             }
             
+            .hero h2 span {
+                font-size: 28px;
+            }
+            
             .section-title {
                 font-size: 28px;
             }
             
-            .services-grid {
+            .services-grid,
+            .testimonials-grid {
                 grid-template-columns: 1fr;
             }
             
@@ -1113,7 +1254,7 @@
                 <div class="logo-img">⚡</div>
                 <div class="logo-text">
                     <h1>ELECTROMON</h1>
-                    <span>Электромонтажные работы</span>
+                    <span>Павел Пономарёв</span>
                 </div>
             </a>
             <div class="header-contacts">
@@ -1138,13 +1279,13 @@
                     ИП с 2020 года • БИН 920404450249
                 </div>
                 <h2>
-                    Электрик в Алматы
-                    <span>от 2500 ₸</span>
+                    Павел — электрик в Алматы
+                    <span>10+ лет опыта</span>
                 </h2>
                 <p class="hero-desc">
                     Профессиональный электромонтаж с гарантией до 3 лет. 
-                    Специализация: установка зарядных станций для электромобилей 
-                    Zeekr, Tesla, Audi, BYD. Работаю в ЖК Уш Сункар и по всему городу.
+                    Начал с промышленных объектов, сейчас частный электрик премиум-класса. 
+                    Специализация: установка зарядных станций для электромобилей.
                 </p>
                 <div class="hero-features">
                     <div class="hero-feature">
@@ -1157,7 +1298,7 @@
                     </div>
                     <div class="hero-feature">
                         <i class="fas fa-tools"></i>
-                        <span>Материалы премиум-класса (Schneider, ABB)</span>
+                        <span>1000+ выполненных работ</span>
                     </div>
                 </div>
                 <div class="hero-cta">
@@ -1172,12 +1313,13 @@
                 </div>
             </div>
             <div class="hero-visual">
-                <img src="https://raw.githubusercontent.com/electromonkz/electromonkz.github.io/main/IMG-20260129-WA0065(1).jpg" 
-                     alt="Установка зарядной станции Audi" 
-                     class="hero-image">
+                <img src="IMG_20260214_223831.jpg" 
+                     alt="Павел Пономарёв — электрик в Алматы" 
+                     class="hero-image"
+                     onclick="openLightbox(this.src)">
                 <div class="hero-stats">
-                    <div class="hero-stats-number">150+</div>
-                    <div class="hero-stats-text">Установленных зарядок<br>и электрощитов</div>
+                    <div class="hero-stats-number">1000+</div>
+                    <div class="hero-stats-text">Выполненных работ<br>за 10 лет</div>
                 </div>
             </div>
         </div>
@@ -1211,6 +1353,49 @@
         </div>
     </section>
 
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container about-content">
+            <div class="about-images">
+                <img src="IMG_20260214_223848.jpg" 
+                     alt="Павел на объекте" 
+                     class="about-image main"
+                     onclick="openLightbox(this.src)">
+                <img src="IMG_20260214_225127.jpg" 
+                     alt="Процесс работы" 
+                     class="about-image"
+                     onclick="openLightbox(this.src)">
+                <img src="IMG-20250317-WA0043.jpg" 
+                     alt="Сборка щита" 
+                     class="about-image"
+                     onclick="openLightbox(this.src)">
+            </div>
+            <div class="about-text">
+                <div class="section-tag">О МАСТЕРЕ</div>
+                <h3>Павел <span>Пономарёв</span></h3>
+                <p>
+                    <strong>Электромонтёр с 10-летним стажем.</strong> Начинал с промышленных объектов — 
+                    работал на крупных предприятиях с напряжением до 1000В.
+                </p>
+                <p>
+                    Сейчас специализируюсь на частных заказах премиум-класса: 
+                    установка зарядных станций для электромобилей, умные дома, 
+                    сложная замена проводки в коттеджах и новостройках.
+                </p>
+                <ul class="about-features">
+                    <li><i class="fas fa-check-circle"></i> Удостоверение электромонтёра №8724</li>
+                    <li><i class="fas fa-check-circle"></i> Допуск до 1000В и выше</li>
+                    <li><i class="fas fa-check-circle"></i> Работаю с Zeekr, Tesla, Audi, BYD, BMW</li>
+                    <li><i class="fas fa-check-circle"></i> Материалы Schneider, ABB, IEK</li>
+                </ul>
+                <a href="#documents" class="btn-primary">
+                    <i class="fas fa-id-card"></i>
+                    Смотреть документы
+                </a>
+            </div>
+        </div>
+    </section>
+
     <!-- Services -->
     <section class="services" id="services">
         <div class="container">
@@ -1226,9 +1411,10 @@
             <div class="services-grid">
                 <!-- Service 1 -->
                 <div class="service-card">
-                    <img src="https://raw.githubusercontent.com/electromonkz/electromonkz.github.io/main/IMG-20260209-WA0056.jpg" 
-                         alt="Сборка электрощита" 
-                         class="service-image">
+                    <img src="IMG_20260214_225127.jpg" 
+                         alt="Замена проводки" 
+                         class="service-image"
+                         onclick="openLightbox(this.src)">
                     <div class="service-content">
                         <div class="service-header">
                             <div>
@@ -1256,9 +1442,10 @@
                 <!-- Service 2 - EV Charging -->
                 <div class="service-card" style="border: 2px solid var(--accent);">
                     <div style="position: absolute; top: 15px; right: 15px; background: var(--accent); color: var(--primary); padding: 5px 12px; border-radius: 20px; font-size: 11px; font-weight: 800; z-index: 2;">ПОПУЛЯРНО</div>
-                    <img src="https://raw.githubusercontent.com/electromonkz/electromonkz.github.io/main/IMG-20260123-WA0033(1).jpg" 
-                         alt="Установка зарядной станции Zeekr" 
-                         class="service-image">
+                    <img src="https://i.ibb.co/20G1h7V/IMG-20260123-WA0033-1.jpg" 
+                         alt="Установка зарядной станции" 
+                         class="service-image"
+                         onclick="openLightbox(this.src)">
                     <div class="service-content">
                         <div class="service-header">
                             <div>
@@ -1285,9 +1472,10 @@
 
                 <!-- Service 3 -->
                 <div class="service-card">
-                    <img src="https://raw.githubusercontent.com/electromonkz/electromonkz.github.io/main/IMG-20260209-WA0056.jpg" 
-                         alt="Сборка электрощита Schneider Electric" 
-                         class="service-image">
+                    <img src="IMG-20250317-WA0043.jpg" 
+                         alt="Сборка электрощита" 
+                         class="service-image"
+                         onclick="openLightbox(this.src)">
                     <div class="service-content">
                         <div class="service-header">
                             <div>
@@ -1316,7 +1504,7 @@
     </section>
 
     <!-- Portfolio -->
-    <section class="portfolio">
+    <section class="portfolio" id="portfolio">
         <div class="container">
             <div class="section-header">
                 <div class="section-tag">ПОРТФОЛИО</div>
@@ -1327,29 +1515,172 @@
             </div>
             
             <div class="portfolio-grid">
-                <div class="portfolio-item">
-                    <img src="https://raw.githubusercontent.com/electromonkz/electromonkz.github.io/main/IMG-20260123-WA0033(1).jpg" 
-                         alt="Зарядная станция Zeekr с стабилизатором">
+                <div class="portfolio-item" onclick="openLightbox('IMG-20250317-WA0043.jpg')">
+                    <img src="IMG-20250317-WA0043.jpg" 
+                         alt="Готовый электрощит">
                     <div class="portfolio-overlay">
-                        <h4>Zeekr + Стабилизатор</h4>
+                        <h4>Готовый щит</h4>
+                        <p>Schneider Electric, 36 модулей</p>
+                    </div>
+                </div>
+                <div class="portfolio-item" onclick="openLightbox('https://i.ibb.co/20G1h7V/IMG-20260123-WA0033-1.jpg')">
+                    <img src="https://i.ibb.co/20G1h7V/IMG-20260123-WA0033-1.jpg" 
+                         alt="Зарядная станция Zeekr">
+                    <div class="portfolio-overlay">
+                        <h4>Zeekr + стабилизатор</h4>
                         <p>ЖК Уш Сункар, 2024</p>
                     </div>
                 </div>
-                <div class="portfolio-item">
-                    <img src="https://raw.githubusercontent.com/electromonkz/electromonkz.github.io/main/IMG-20260129-WA0065(1).jpg" 
+                <div class="portfolio-item" onclick="openLightbox('https://i.ibb.co/20G1h7V/IMG-20260129-WA0065-1.jpg')">
+                    <img src="https://i.ibb.co/20G1h7V/IMG-20260129-WA0065-1.jpg" 
                          alt="Зарядная станция Audi">
                     <div class="portfolio-overlay">
                         <h4>Audi Wallbox</h4>
                         <p>мкр. Аксай-5, 2024</p>
                     </div>
                 </div>
-                <div class="portfolio-item">
-                    <img src="https://raw.githubusercontent.com/electromonkz/electromonkz.github.io/main/IMG-20260209-WA0056.jpg" 
-                         alt="Сборка электрощита">
+                <div class="portfolio-item" onclick="openLightbox('IMG_20260214_225127.jpg')">
+                    <img src="IMG_20260214_225127.jpg" 
+                         alt="Процесс работы">
                     <div class="portfolio-overlay">
-                        <h4>Сборка щита Schneider</h4>
-                        <p>36 модулей, 2024</p>
+                        <h4>Процесс работы</h4>
+                        <p>Замена проводки</p>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Documents Section -->
+    <section class="documents" id="documents">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-tag">ДОКУМЕНТЫ</div>
+                <h2 class="section-title">Официальное оформление</h2>
+                <p class="section-subtitle">
+                    Работаю официально по договору. Все документы в порядке.
+                </p>
+            </div>
+            
+            <div class="documents-grid">
+                <div class="document-card">
+                    <div class="document-icon">
+                        <i class="fas fa-id-card"></i>
+                    </div>
+                    <h4>Удостоверение электромонтёра</h4>
+                    <p>№ 8724 выдано 16.07.2024<br>Действует до 16.07.2025</p>
+                    <img src="IMG_20260214_225600.jpg" 
+                         alt="Удостоверение электромонтёра" 
+                         class="certificate-img"
+                         onclick="openLightbox(this.src)">
+                </div>
+                
+                <div class="document-card">
+                    <div class="document-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h4>Информация об ИП</h4>
+                    <p>БИН: 920404450249<br>Адрес: Алматы, мкр. Аксай-5</p>
+                    <div style="background: var(--bg-light); padding: 20px; border-radius: 12px; margin-top: 15px;">
+                        <div style="font-size: 13px; color: var(--gray); margin-bottom: 5px;">Полное наименование</div>
+                        <div style="font-weight: 700; font-size: 14px;">ИП Пономарёв Павел Олегович</div>
+                    </div>
+                </div>
+                
+                <div class="document-card">
+                    <div class="document-icon">
+                        <i class="fas fa-file-signature"></i>
+                    </div>
+                    <h4>Образец договора</h4>
+                    <p>Скачайте типовой договор<br>на оказание услуг</p>
+                    <a href="dogovor.pdf" download class="btn-primary" style="margin-top: 15px; display: inline-flex;">
+                        <i class="fas fa-download"></i>
+                        Скачать PDF
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="reviews">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-tag">ОТЗЫВЫ КЛИЕНТОВ</div>
+                <h2 class="section-title">Что говорят заказчики</h2>
+                <p class="section-subtitle">
+                    Реальные отзывы из WhatsApp и Instagram. Каждый отзыв можно проверить.
+                </p>
+            </div>
+            
+            <div class="testimonials-grid">
+                <!-- Review 1 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">Д</div>
+                        <div class="testimonial-meta">
+                            <h4>Дмитрий К.</h4>
+                            <span class="service-type">Зарядная станция Zeekr</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">
+                        "Установил зарядку для Zeekr 001 в подземном паркинге. 
+                        Всё сделано аккуратно, согласовали с УК, провели кабель 15 метров. 
+                        Работает идеально, машина заряжается за 4 часа. Рекомендую!"
+                    </p>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">А</div>
+                        <div class="testimonial-meta">
+                            <h4>Анна М.</h4>
+                            <span class="service-type">Замена проводки</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">
+                        "Делали ремонт в новостройке, нужно было полностью менять проводку. 
+                        Мастер приехал в тот же день, сделал смету и начал работу. 
+                        Очень чисто, без пыли. Дали гарантию 3 года. Спасибо!"
+                    </p>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">С</div>
+                        <div class="testimonial-meta">
+                            <h4>Сергей В.</h4>
+                            <span class="service-type">Сборка электрощита</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p class="testimonial-text">
+                        "Собрали щит на 36 модулей для коттеджа. 
+                        Профессиональный подход — сделали схему, всё подписали, 
+                        проверили каждую линию. Цена адекватная, качество отличное."
+                    </p>
                 </div>
             </div>
         </div>
@@ -1397,7 +1728,6 @@
                 <div class="total-box">
                     <div class="total-label">Примерная стоимость</div>
                     <div class="total-price" id="resPrice">40 000 ₸</div>
-                    <div class="total-note">* Точная цена после осмотра</div>
                 </div>
                 
                 <a href="#request" class="btn-primary" style="width: 100%; margin-top: 20px; text-align: center; display: block;">
@@ -1424,8 +1754,8 @@
                         <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://wa.me/77476619341" 
                              alt="QR код WhatsApp">
                     </div>
-                    <div class="qr-text">Отсканируйте QR</div>
-                    <div class="qr-subtext">для быстрого перехода<br>в WhatsApp</div>
+                    <div style="font-weight: 700; color: var(--primary); margin-bottom: 5px;">Отсканируйте QR</div>
+                    <div style="font-size: 13px; color: var(--gray);">для быстрого перехода<br>в WhatsApp</div>
                 </div>
                 
                 <div class="request-form">
@@ -1505,10 +1835,10 @@
                 <div>
                     <div class="footer-title">ИНФО</div>
                     <ul class="footer-links">
-                        <li><a href="#">О нас</a></li>
-                        <li><a href="#">Гарантии</a></li>
-                        <li><a href="#">Портфолио</a></li>
-                        <li><a href="#">Отзывы</a></li>
+                        <li><a href="#about">О мастере</a></li>
+                        <li><a href="#portfolio">Портфолио</a></li>
+                        <li><a href="#documents">Документы</a></li>
+                        <li><a href="#reviews">Отзывы</a></li>
                     </ul>
                 </div>
                 
@@ -1523,9 +1853,9 @@
             </div>
             
             <div class="footer-bottom">
-                <p>© 2024 ELECTROMON. ИП Казахстан, Алматы. БИН 920404450249</p>
+                <p>© 2024 ELECTROMON. ИП Пономарёв Павел Олегович. БИН 920404450249</p>
                 <p style="margin-top: 10px; font-size: 12px;">
-                    Лицензия на электромонтажные работы • Гарантия на все виды работ
+                    Удостоверение электромонтёра №8724 • Гарантия на все виды работ
                 </p>
             </div>
         </div>
@@ -1535,16 +1865,19 @@
     <div class="fab-container">
         <a href="https://www.instagram.com/electromon.kz" target="_blank" class="fab fab-instagram">
             <i class="fab fa-instagram"></i>
-            <span class="fab-label">Instagram</span>
         </a>
         <a href="tel:+77476619341" class="fab fab-phone">
             <i class="fas fa-phone"></i>
-            <span class="fab-label">Позвонить</span>
         </a>
         <a href="https://wa.me/77476619341" class="fab fab-whatsapp">
             <i class="fab fa-whatsapp"></i>
-            <span class="fab-label">WhatsApp</span>
         </a>
+    </div>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+        <span class="lightbox-close">&times;</span>
+        <img src="" alt="Увеличенное фото" id="lightbox-img">
     </div>
 
     <script>
@@ -1559,7 +1892,7 @@
             
             let total = price * qty;
             if (qty >= 5 && !selectedText.includes('станция')) {
-                total = Math.round(total * 0.9); // 10% скидка
+                total = Math.round(total * 0.9);
             }
             
             document.getElementById('resPrice').innerText = total.toLocaleString() + " ₸";
@@ -1583,6 +1916,22 @@
             
             window.open(`https://wa.me/77476619341?text=${encodeURIComponent(text)}`, '_blank');
         }
+
+        // Lightbox
+        function openLightbox(src) {
+            document.getElementById('lightbox-img').src = src;
+            document.getElementById('lightbox').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        document.addEventListener('keydown', function(e) {
+            if(e.key === 'Escape') closeLightbox();
+        });
 
         // Smooth scroll
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -1609,7 +1958,7 @@
             });
         }, observerOptions);
 
-        document.querySelectorAll('.service-card, .portfolio-item').forEach(el => {
+        document.querySelectorAll('.service-card, .portfolio-item, .testimonial-card, .document-card').forEach(el => {
             observer.observe(el);
         });
     </script>

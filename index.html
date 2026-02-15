@@ -5,16 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- SEO Meta Tags -->
-    <title>Павел Пономарев — Электрик в Алматы | ELECTROMON | Установка зарядных станций</title>
-    <meta name="description" content="Профессиональный электрик Павел Пономарев в Алматы. 15 лет опыта, установка зарядных станций Zeekr, Tesla, Audi, BYD. Гарантия 3 года. Выезд 30 минут (Аксай-5, Таугуль, Уш Сункар).">
-    <meta name="keywords" content="электрик алматы, Пономарев Павел, установка зарядной станции алматы, электромонтаж алматы, замена проводки алматы, зарядка для электромобиля алматы, электрик аксай, электрик таугуль">
+    <title>ELECTROMON — Электромонтаж в Алматы | Промышленный электромонтаж, зарядные станции EV</title>
+    <meta name="description" content="ELECTROMON — профессиональный электромонтаж в Алматы. Работали с Грузинский Двор, Coffee Boom, Time Group, Rams, Kazakh Stroika, Bazis. Установка зарядных станций, сборка щитов. Гарантия 3 года.">
+    <meta name="keywords" content="электромонтаж алматы, электрик для бизнеса алматы, промышленный электромонтаж алматы, установка зарядной станции алматы, электромонтажные работы алматы, electomon">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="Павел Пономарев — Электрик в Алматы | ELECTROMON">
-    <meta property="og:description" content="15 лет опыта. Установка зарядок для электромобилей, сборка щитов. Гарантия 3 года. Выезд за 30 минут.">
+    <meta property="og:title" content="ELECTROMON — Электромонтаж в Алматы">
+    <meta property="og:description" content="Промышленный и бытовой электромонтаж. Работаем с крупными сетями и корпорациями. Гарантия 3 года.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://electromonkz.github.io">
-    <meta property="og:image" content="https://electromonkz.github.io/IMG_20260214_223831.jpg">
+    <meta property="og:image" content="https://electromonkz.github.io/IMG-20250317-WA0043.jpg">
     
     <!-- Verification -->
     <meta name="google-site-verification" content="w-FcNk_3tlQHiSZvDqM_DSJZ03TeAgnet8qY1jaJKlc" />
@@ -270,12 +270,12 @@
         
         .hero-image {
             width: 100%;
-            max-width: 400px;
+            max-width: 500px;
             border-radius: 20px;
             box-shadow: 0 30px 60px rgba(0,0,0,0.4);
             border: 3px solid rgba(255,199,0,0.2);
             object-fit: cover;
-            aspect-ratio: 3/4;
+            aspect-ratio: 4/3;
         }
         
         .hero-stats {
@@ -340,10 +340,62 @@
             color: var(--gray);
         }
 
+        /* Clients Section */
+        .clients {
+            padding: 80px 0;
+            background: var(--white);
+        }
+        
+        .clients-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .client-card {
+            background: var(--bg-light);
+            border-radius: 16px;
+            padding: 30px;
+            text-align: center;
+            transition: all 0.3s;
+            border: 2px solid transparent;
+        }
+        
+        .client-card:hover {
+            border-color: var(--accent);
+            transform: translateY(-5px);
+        }
+        
+        .client-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--accent);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 15px;
+            font-size: 24px;
+            color: var(--primary);
+        }
+        
+        .client-name {
+            font-size: 18px;
+            font-weight: 800;
+            color: var(--primary);
+            margin-bottom: 5px;
+        }
+        
+        .client-type {
+            font-size: 13px;
+            color: var(--gray);
+        }
+
         /* About Section */
         .about {
             padding: 100px 0;
-            background: var(--white);
+            background: var(--bg-light);
         }
         
         .about-content {
@@ -420,7 +472,7 @@
         /* Services */
         .services {
             padding: 80px 0;
-            background: var(--bg-light);
+            background: var(--white);
         }
         
         .section-header {
@@ -460,7 +512,7 @@
         }
         
         .service-card { 
-            background: var(--white); 
+            background: var(--bg-light); 
             border-radius: 20px; 
             overflow: hidden;
             box-shadow: 0 5px 20px rgba(0,0,0,0.06);
@@ -578,7 +630,7 @@
         /* Portfolio */
         .portfolio {
             padding: 80px 0;
-            background: var(--white);
+            background: var(--bg-light);
             position: relative;
             overflow: hidden;
         }
@@ -654,7 +706,7 @@
         /* Documents Section */
         .documents {
             padding: 100px 0;
-            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            background: var(--white);
         }
         
         .documents-grid {
@@ -664,7 +716,7 @@
         }
         
         .document-card {
-            background: var(--white);
+            background: var(--bg-light);
             border-radius: 20px;
             padding: 30px;
             box-shadow: 0 10px 40px rgba(0,0,0,0.06);
@@ -703,7 +755,7 @@
         }
         
         .certificate-info {
-            background: var(--bg-light);
+            background: var(--white);
             padding: 20px;
             border-radius: 12px;
             margin-top: 15px;
@@ -1241,23 +1293,28 @@
             .portfolio-grid {
                 grid-template-columns: 1fr;
             }
+            
+            .clients-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
         }
         
         @media (max-width: 640px) {
             .hero h2 {
-                font-size: 32px;
+                font-size: 28px;
             }
             
             .hero h2 span {
-                font-size: 28px;
+                font-size: 24px;
             }
             
             .section-title {
-                font-size: 28px;
+                font-size: 24px;
             }
             
             .services-grid,
-            .testimonials-grid {
+            .testimonials-grid,
+            .clients-grid {
                 grid-template-columns: 1fr;
             }
             
@@ -1302,7 +1359,7 @@
                 <div class="logo-img">⚡</div>
                 <div class="logo-text">
                     <h1>ELECTROMON</h1>
-                    <span>Павел Пономарев</span>
+                    <span>Профессиональный электромонтаж</span>
                 </div>
             </a>
             <div class="header-contacts">
@@ -1327,13 +1384,13 @@
                     ИП ELECTROMON с 2020 года
                 </div>
                 <h2>
-                    Павел — электрик в Алматы
-                    <span>15 лет опыта</span>
+                    Профессиональный электромонтаж
+                    <span>в Алматы</span>
                 </h2>
                 <p class="hero-desc">
-                    Профессиональный электромонтаж с гарантией до 3 лет. 
-                    Начал с промышленных объектов, сейчас частный электрик премиум-класса. 
-                    Специализация: установка зарядных станций для электромобилей.
+                    Работаем с крупными сетями и корпорациями. 
+                    Промышленный и бытовой электромонтаж, установка зарядных станций для электромобилей. 
+                    Гарантия до 3 лет на все виды работ.
                 </p>
                 <div class="hero-features">
                     <div class="hero-feature">
@@ -1346,13 +1403,13 @@
                     </div>
                     <div class="hero-feature">
                         <i class="fas fa-tools"></i>
-                        <span>1000+ выполненных работ</span>
+                        <span>1000+ выполненных проектов</span>
                     </div>
                 </div>
                 <div class="hero-cta">
                     <a href="https://wa.me/77476619341" class="btn-primary">
                         <i class="fab fa-whatsapp"></i>
-                        Написать в WhatsApp
+                        Получить коммерческое предложение
                     </a>
                     <a href="tel:+77476619341" class="btn-secondary">
                         <i class="fas fa-phone"></i>
@@ -1361,13 +1418,13 @@
                 </div>
             </div>
             <div class="hero-visual">
-                <img src="IMG_20260214_223831.jpg" 
-                     alt="Павел Пономарев — электрик в Алматы" 
+                <img src="IMG-20250317-WA0043.jpg" 
+                     alt="Сборка электрощита ELECTROMON" 
                      class="hero-image"
                      onclick="openLightbox(this.src)">
                 <div class="hero-stats">
                     <div class="hero-stats-number">1000+</div>
-                    <div class="hero-stats-text">Выполненных работ<br>за 15 лет</div>
+                    <div class="hero-stats-text">Выполненных проектов<br>за 15 лет</div>
                 </div>
             </div>
         </div>
@@ -1379,7 +1436,7 @@
             <div class="trust-grid">
                 <div class="trust-item">
                     <i class="fas fa-clock"></i>
-                    <span>Работаю ежедневно</span>
+                    <span>Работаем ежедневно</span>
                     <small>09:00 - 21:00</small>
                 </div>
                 <div class="trust-item">
@@ -1401,44 +1458,100 @@
         </div>
     </section>
 
+    <!-- Clients Section -->
+    <section class="clients" id="clients">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-tag">НАШИ КЛИЕНТЫ</div>
+                <h2 class="section-title">Работаем с крупными сетями и корпорациями</h2>
+                <p class="section-subtitle">
+                    Нам доверяют ведущие компании Казахстана. 
+                    Каждый проект — от ресторанов до промышленных объектов.
+                </p>
+            </div>
+            
+            <div class="clients-grid">
+                <div class="client-card">
+                    <div class="client-icon">🍽️</div>
+                    <div class="client-name">Грузинский Двор</div>
+                    <div class="client-type">Сеть ресторанов</div>
+                </div>
+                <div class="client-card">
+                    <div class="client-icon">☕</div>
+                    <div class="client-name">Coffee Boom</div>
+                    <div class="client-type">Сеть кофеен</div>
+                </div>
+                <div class="client-card">
+                    <div class="client-icon">🏪</div>
+                    <div class="client-name">Белорусские товары</div>
+                    <div class="client-type">Сеть магазинов</div>
+                </div>
+                <div class="client-card">
+                    <div class="client-icon">🏢</div>
+                    <div class="client-name">Time Group</div>
+                    <div class="client-type">Корпорация</div>
+                </div>
+                <div class="client-card">
+                    <div class="client-icon">🏗️</div>
+                    <div class="client-name">Rams</div>
+                    <div class="client-type">Строительная компания</div>
+                </div>
+                <div class="client-card">
+                    <div class="client-icon">🏭</div>
+                    <div class="client-name">Kazakh Stroika</div>
+                    <div class="client-type">Промышленность</div>
+                </div>
+                <div class="client-card">
+                    <div class="client-icon">🏬</div>
+                    <div class="client-name">Bazis</div>
+                    <div class="client-type">Девелопер</div>
+                </div>
+                <div class="client-card">
+                    <div class="client-icon">⚡</div>
+                    <div class="client-name">и другие...</div>
+                    <div class="client-type">Частные и юр. лица</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- About Section -->
     <section class="about" id="about">
         <div class="container about-content">
             <div class="about-images">
-                <img src="IMG_20260214_223848.jpg" 
-                     alt="Павел Пономарев в форме с планшетом" 
+                <img src="IMG-20250317-WA0043.jpg" 
+                     alt="Сборка щита для кафе, 48 модулей" 
                      class="about-image main"
                      onclick="openLightbox(this.src)">
                 <img src="IMG_20260214_225127.jpg" 
                      alt="Разборка старой проводки перед заменой" 
                      class="about-image secondary"
                      onclick="openLightbox(this.src)">
-                <img src="IMG-20250317-WA0043.jpg" 
-                     alt="Сборка щита для кафе, 48 модулей" 
+                <img src="IMG-20260209-WA0056.jpg" 
+                     alt="Готовый электрощит Schneider Electric" 
                      class="about-image secondary"
                      onclick="openLightbox(this.src)">
             </div>
             <div class="about-text">
-                <div class="section-tag">О МАСТЕРЕ</div>
-                <h3>Павел <span>Пономарев</span></h3>
+                <div class="section-tag">О КОМПАНИИ</div>
+                <h3>ELECTROMON — <span>надежный подрядчик</span></h3>
                 <p>
-                    <strong>Электромонтер с 15-летним стажем.</strong> Начинал с промышленных объектов — 
-                    работал на крупных предприятиях с напряжением до 1000В.
+                    <strong>15 лет опыта в электромонтаже.</strong> Начинали с промышленных объектов, 
+                    работали на крупных предприятиях с напряжением до 1000В.
                 </p>
                 <p>
-                    Сейчас специализируюсь на частных заказах премиум-класса: 
-                    установка зарядных станций для электромобилей, умные дома, 
-                    сложная замена проводки в коттеджах и новостройках.
+                    Сегодня сотрудничаем с ведущими сетями ресторанов, магазинов и строительными корпорациями. 
+                    Выполняем проекты любой сложности: от замены проводки в квартире до электроснабжения торговых центров.
                 </p>
                 <ul class="about-features">
                     <li><i class="fas fa-check-circle"></i> Удостоверение электромонтера №8724</li>
                     <li><i class="fas fa-check-circle"></i> Допуск до 1000В и выше</li>
-                    <li><i class="fas fa-check-circle"></i> Работаю с Zeekr, Tesla, Audi, BYD, BMW</li>
+                    <li><i class="fas fa-check-circle"></i> Работаем с Zeekr, Tesla, Audi, BYD, BMW</li>
                     <li><i class="fas fa-check-circle"></i> Материалы Schneider, ABB, IEK</li>
                 </ul>
                 <a href="#documents" class="btn-primary">
                     <i class="fas fa-id-card"></i>
-                    Смотреть документы
+                    Документы компании
                 </a>
             </div>
         </div>
@@ -1449,10 +1562,9 @@
         <div class="container">
             <div class="section-header">
                 <div class="section-tag">УСЛУГИ</div>
-                <h2 class="section-title">Чем могу помочь</h2>
+                <h2 class="section-title">Комплексные решения для бизнеса и частных клиентов</h2>
                 <p class="section-subtitle">
-                    От простой замены розетки до сложного монтажа зарядных станций 
-                    для электромобилей премиум-класса
+                    От проектирования до сдачи под ключ. Работаем по договору с гарантией.
                 </p>
             </div>
             
@@ -1471,7 +1583,7 @@
                             <div class="service-icon">⚡</div>
                         </div>
                         <p class="service-desc">
-                            Полная или частичная замена электропроводки в квартирах и домах. 
+                            Полная или частичная замена электропроводки в квартирах, офисах и магазинах. 
                             Штробление без пыли, прокладка кабеля по ГОСТ.
                         </p>
                         <ul class="service-features">
@@ -1503,7 +1615,7 @@
                         </div>
                         <p class="service-desc">
                             Профессиональный монтаж зарядных станций для электромобилей 
-                            в частных домах и подземных паркингах.
+                            в подземных паркингах ЖК и бизнес-центров.
                         </p>
                         <ul class="service-features">
                             <li><i class="fas fa-check"></i> Zeekr, Tesla, Audi, BYD, BMW</li>
@@ -1532,7 +1644,7 @@
                             <div class="service-icon">📦</div>
                         </div>
                         <p class="service-desc">
-                            Сборка и монтаж распределительных щитов любой сложности. 
+                            Сборка и монтаж распределительных щитов для кафе, магазинов и офисов. 
                             Защита от скачков напряжения, УЗО, дифавтоматы.
                         </p>
                         <ul class="service-features">
@@ -1556,9 +1668,9 @@
         <div class="container">
             <div class="section-header">
                 <div class="section-tag">ПОРТФОЛИО</div>
-                <h2 class="section-title">Выполненные работы</h2>
+                <h2 class="section-title">Выполненные проекты</h2>
                 <p class="section-subtitle">
-                    Реальные фотографии с объектов. Каждая работа — с гарантией и документацией.
+                    Реальные фотографии с объектов. Каждый проект — с гарантией и документацией.
                 </p>
             </div>
             
@@ -1606,7 +1718,7 @@
                 <div class="section-tag">ДОКУМЕНТЫ</div>
                 <h2 class="section-title">Официальное оформление</h2>
                 <p class="section-subtitle">
-                    Работаю официально по договору. Все документы в порядке.
+                    Работаем официально по договору. Все документы в порядке.
                 </p>
             </div>
             
@@ -1667,14 +1779,37 @@
         <div class="container">
             <div class="section-header">
                 <div class="section-tag">ОТЗЫВЫ КЛИЕНТОВ</div>
-                <h2 class="section-title">Что говорят заказчики</h2>
+                <h2 class="section-title">Что говорят наши клиенты</h2>
                 <p class="section-subtitle">
-                    Реальные отзывы из WhatsApp и Instagram. Каждый отзыв можно проверить.
+                    Реальные отзывы от компаний и частных заказчиков.
                 </p>
             </div>
             
             <div class="testimonials-grid">
                 <!-- Review 1 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">ГД</div>
+                        <div class="testimonial-meta">
+                            <h4>Грузинский Двор</h4>
+                            <span class="service-type">Электромонтаж ресторана</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">
+                        "Сделали полный электромонтаж нового филиала за 2 недели. 
+                        Все четко по проекту, без задержек. Собрали щит на 48 модулей, 
+                        провели силовые линии. Работаем с ними постоянно."
+                    </p>
+                </div>
+
+                <!-- Review 2 -->
                 <div class="testimonial-card">
                     <div class="testimonial-header">
                         <div class="testimonial-avatar">Д</div>
@@ -1691,42 +1826,19 @@
                         <i class="fas fa-star"></i>
                     </div>
                     <p class="testimonial-text">
-                        "Установил зарядку для Zeekr 001 в подземном паркинге. 
-                        Всё сделано аккуратно, согласовали с УК, провели кабель 15 метров. 
-                        Работает идеально, машина заряжается за 4 часа. Рекомендую!"
-                    </p>
-                </div>
-
-                <!-- Review 2 -->
-                <div class="testimonial-card">
-                    <div class="testimonial-header">
-                        <div class="testimonial-avatar">А</div>
-                        <div class="testimonial-meta">
-                            <h4>Анна М.</h4>
-                            <span class="service-type">Замена проводки</span>
-                        </div>
-                    </div>
-                    <div class="testimonial-rating">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <p class="testimonial-text">
-                        "Делали ремонт в новостройке, нужно было полностью менять проводку. 
-                        Мастер приехал в тот же день, сделал смету и начал работу. 
-                        Очень чисто, без пыли. Дали гарантию 3 года. Спасибо!"
+                        "Установили зарядку для Zeekr 001 в подземном паркинге. 
+                        Всё согласовали с УК, провели кабель 15 метров. 
+                        Работает идеально. Рекомендую!"
                     </p>
                 </div>
 
                 <!-- Review 3 -->
                 <div class="testimonial-card">
                     <div class="testimonial-header">
-                        <div class="testimonial-avatar">С</div>
+                        <div class="testimonial-avatar">CB</div>
                         <div class="testimonial-meta">
-                            <h4>Сергей В.</h4>
-                            <span class="service-type">Сборка электрощита</span>
+                            <h4>Coffee Boom</h4>
+                            <span class="service-type">Сборка щита для кофейни</span>
                         </div>
                     </div>
                     <div class="testimonial-rating">
@@ -1737,9 +1849,9 @@
                         <i class="fas fa-star-half-alt"></i>
                     </div>
                     <p class="testimonial-text">
-                        "Собрали щит на 48 модулей для коттеджа. 
-                        Профессиональный подход — сделали схему, всё подписали, 
-                        проверили каждую линию. Цена адекватная, качество отличное."
+                        "Быстро собрали щит для новой точки. Профессиональный подход — 
+                        сделали схему, всё подписали, проверили каждую линию. 
+                        Цена адекватная, качество отличное."
                     </p>
                 </div>
             </div>
@@ -1791,7 +1903,7 @@
                 </div>
                 
                 <a href="#request" class="btn-primary" style="width: 100%; margin-top: 20px; text-align: center; display: block;">
-                    Получить точный расчет
+                    Получить коммерческое предложение
                 </a>
             </div>
         </div>
@@ -1804,7 +1916,7 @@
                 <div class="section-tag">КОНТАКТЫ</div>
                 <h2 class="section-title">Оставить заявку</h2>
                 <p class="section-subtitle">
-                    Отвечу в течение 15 минут. Работаю без выходных.
+                    Ответим в течение 15 минут. Работаем без выходных.
                 </p>
             </div>
             
@@ -1827,7 +1939,7 @@
                     <form onsubmit="event.preventDefault(); sendToWhatsApp();">
                         <div class="form-grid">
                             <div class="form-group">
-                                <input type="text" id="clientName" placeholder="Ваше имя" required>
+                                <input type="text" id="clientName" placeholder="Ваше имя / Компания" required>
                             </div>
                             <div class="form-group">
                                 <input type="tel" id="clientPhone" placeholder="Ваш телефон" required>
@@ -1838,6 +1950,7 @@
                                     <option value="Установка зарядки EV">Установка зарядки EV</option>
                                     <option value="Сборка щита">Сборка щита</option>
                                     <option value="Розетки/выключатели">Розетки/выключатели</option>
+                                    <option value="Комплексный электромонтаж">Комплексный электромонтаж</option>
                                     <option value="Другое">Другое</option>
                                 </select>
                             </div>
@@ -1855,7 +1968,7 @@
                                 </div>
                             </div>
                             <div class="form-group full">
-                                <textarea id="clientMessage" placeholder="Опишите задачу (необязательно)"></textarea>
+                                <textarea id="clientMessage" placeholder="Опишите задачу (площадь, тип объекта и т.д.)"></textarea>
                             </div>
                         </div>
                         <button type="submit" class="btn-submit">
@@ -1876,8 +1989,8 @@
                     <h3><span style="color: var(--accent);">⚡</span> ELECTROMON</h3>
                     <p>
                         Профессиональный электромонтаж в Алматы с 2020 года. 
-                        Специализация на зарядных станциях для электромобилей 
-                        и сложных электромонтажных работах.
+                        Работаем с крупными сетями и корпорациями. 
+                        Промышленный и бытовой электромонтаж.
                     </p>
                     <div class="footer-contact">
                         <a href="tel:+77476619341">
@@ -1901,14 +2014,14 @@
                         <li><a href="#services">Замена проводки</a></li>
                         <li><a href="#services">Зарядные станции EV</a></li>
                         <li><a href="#services">Сборка щитов</a></li>
-                        <li><a href="#services">Аварийный вызов</a></li>
+                        <li><a href="#services">Комплексный электромонтаж</a></li>
                     </ul>
                 </div>
                 
                 <div>
                     <div class="footer-title">ИНФО</div>
                     <ul class="footer-links">
-                        <li><a href="#about">О мастере</a></li>
+                        <li><a href="#clients">Наши клиенты</a></li>
                         <li><a href="#portfolio">Портфолио</a></li>
                         <li><a href="#documents">Документы</a></li>
                         <li><a href="#reviews">Отзывы</a></li>
@@ -1988,7 +2101,7 @@
                 return; 
             }
             
-            let text = `Здравствуйте! Меня зовут ${name}.\nТелефон: ${phone}\nУслуга: ${service}`;
+            let text = `Здравствуйте! Меня зовут / Компания: ${name}.\nТелефон: ${phone}\nУслуга: ${service}`;
             if(date) text += `\nДата: ${date}`;
             if(time) text += `\nВремя: ${time}`;
             if(message) text += `\n\nКомментарий: ${message}`;
@@ -2038,7 +2151,7 @@
             });
         }, observerOptions);
 
-        document.querySelectorAll('.service-card, .portfolio-item, .testimonial-card, .document-card').forEach(el => {
+        document.querySelectorAll('.service-card, .portfolio-item, .testimonial-card, .document-card, .client-card').forEach(el => {
             observer.observe(el);
         });
     </script>
